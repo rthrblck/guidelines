@@ -15,7 +15,6 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Calligraphy Guideline Generator</h1>
             <img src={grid} className="App-grid" alt="grid" />
-            <RaisedButton label="Default" />
           </header>
         </div>
       </MuiThemeProvider>
