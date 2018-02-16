@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
+import MyDrawer from './Drawer';
 
 import logo from './logo.svg';
 import grid from './grid.png';
@@ -11,6 +11,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
+          <MyDrawer />
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Calligraphy Guideline Generator</h1>
