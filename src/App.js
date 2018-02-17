@@ -11,7 +11,9 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
-          <MyDrawer />
+          <MyDrawer>
+            
+          </MyDrawer>
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Calligraphy Guideline Generator</h1>

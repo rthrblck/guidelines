@@ -1,7 +1,7 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
+
+import CardExampleExpandable from './Card';
 
 class MyDrawer extends React.Component {
 
@@ -10,18 +10,15 @@ class MyDrawer extends React.Component {
     this.state = {open: true};
   }
 
-  handleToggle = () => this.setState({open: !this.state.open});
-
   render() {
     return (
       <div>
-        <RaisedButton
-          label="Toggle Drawer"
-          onClick={this.handleToggle}
-        />
-        <Drawer open={this.state.open}>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
+        <Drawer
+          docked={true}
+          width={300}
+          open={this.state.open}>
+            <h1>Menu Title</h1>
+            <CardExampleExpandable />
         </Drawer>
       </div>
     );
