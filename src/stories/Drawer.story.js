@@ -1,16 +1,15 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+// import { action } from '@storybook/addon-actions';
+// import { linkTo } from '@storybook/addon-links';
 
-import Drawer from '../Drawer.js';
+import Drawer from '../Drawer';
 
 storiesOf('Drawer', module)
-  .add('initial setup', () => <Drawer/>)
-  ;
-
-
+  .add('initial setup', () => (
+    <Drawer />
+  ));
 
 // import { Button, Welcome } from '@storybook/react/demo';
 //
