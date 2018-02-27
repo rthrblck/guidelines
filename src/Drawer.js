@@ -3,6 +3,7 @@ import React from 'react';
 import MuiDrawer from 'material-ui/Drawer';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
+import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 
 const Drawer = props => (
@@ -12,10 +13,19 @@ const Drawer = props => (
     <div />
     <Card>
       <CardContent>
-        <Typography>Butts</Typography>
+        <Typography>Card Label</Typography>
+        <TextField
+          id="number"
+          label="Nib Width"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          margin="normal"
+        />
       </CardContent>
       <CardActions>
-        <Button size="large">Clickity clack</Button>
+        <Button size="large">Button</Button>
       </CardActions>
     </Card>
   </MuiDrawer>
