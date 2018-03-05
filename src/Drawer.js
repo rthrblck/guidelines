@@ -2,9 +2,11 @@ import React from 'react';
 
 import MuiDrawer from 'material-ui/Drawer';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
+import Button from 'material-ui/Button';
+
+// TextField imports
 import Typography from 'material-ui/Typography';
 import TextField from 'material-ui/TextField';
-import Button from 'material-ui/Button';
 
 const Drawer = props => (
   <MuiDrawer
@@ -16,12 +18,12 @@ const Drawer = props => (
         <Typography>Card Label</Typography>
         <TextField
           id="number"
-          label="Nib Width"
+          label="number"
+          name="number"
           type="number"
-          InputLabelProps={{
-            shrink: true,
-          }}
           margin="normal"
+          helperText="This is some helper text"
+          value={props.defaultNum}
         />
       </CardContent>
       <CardActions>
@@ -32,3 +34,7 @@ const Drawer = props => (
 );
 
 export default Drawer;
+
+// TODO: Figure out decimal display for number fields (0.0)
+// TODO: Group multiple textFields on Card
+// TODO: Group multiple Cards in Drawer

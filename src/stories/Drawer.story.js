@@ -8,7 +8,9 @@ import Drawer from '../Drawer';
 
 storiesOf('Drawer', module)
   .add('initial setup', () => (
-    <Drawer />
+    <Drawer
+      defaultNum={3}
+    />
   ));
 
 // import { Button, Welcome } from '@storybook/react/demo';
