@@ -8,6 +8,9 @@ import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import TextField from 'material-ui/TextField';
 
+// InputAdornment imports
+import { InputAdornment } from 'material-ui/Input';
+
 const Drawer = props => (
   <MuiDrawer
     variant="permanent"
@@ -23,7 +26,13 @@ const Drawer = props => (
           type="number"
           margin="normal"
           helperText="This is some helper text"
-          value={props.defaultNum}
+          // value={props.defaultNum}
+          InputProps={{
+            endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+          }}
+          inputProps={{
+            step: '0.1',
+          }}
         />
       </CardContent>
       <CardActions>
