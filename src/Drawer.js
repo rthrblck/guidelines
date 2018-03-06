@@ -44,6 +44,5 @@ const Drawer = props => (
 
 export default Drawer;
 
-// TODO: Figure out decimal display for number fields (0.0)
 // TODO: Group multiple textFields on Card
 // TODO: Group multiple Cards in Drawer
