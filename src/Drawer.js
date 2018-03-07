@@ -1,8 +1,7 @@
 import React from 'react';
 
 import MuiDrawer from 'material-ui/Drawer';
-import Card, { CardActions, CardContent } from 'material-ui/Card';
-import Button from 'material-ui/Button';
+import Card, { CardContent } from 'material-ui/Card';
 
 // TextField imports
 import Typography from 'material-ui/Typography';
@@ -18,26 +17,49 @@ const Drawer = props => (
     <div />
     <Card>
       <CardContent>
-        <Typography>Card Label</Typography>
-        <TextField
-          id="number"
-          label="number"
-          name="number"
-          type="number"
-          margin="normal"
-          helperText="This is some helper text"
-          // value={props.defaultNum}
-          InputProps={{
-            endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-          }}
-          inputProps={{
-            step: '0.1',
-          }}
-        />
+        <Typography>Fundamental Lines</Typography>
+
+        <div>
+          {/* Nib Width */}
+          <TextField
+            id="Nib width"
+            label="Nib width"
+            name="number"
+            type="number"
+            margin="normal"
+            helperText="The width of your nib in millimeters"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+            }}
+            inputProps={{
+              step: '0.1',
+              min: '0',
+            }}
+
+          />
+        </div>
+
+        <div>
+          {/* X-height */}
+          <TextField
+            id="x-height"
+            label="X-height"
+            name="number"
+            type="number"
+            margin="normal"
+            helperText="The distance between the baseline and the x-height in nib widths"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
+            }}
+            inputProps={{
+              step: '0.1',
+            }}
+          />
+        </div>
+
       </CardContent>
-      <CardActions>
-        <Button size="large">Button</Button>
-      </CardActions>
     </Card>
   </MuiDrawer>
 );

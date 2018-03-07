@@ -4,6 +4,7 @@
 
 - [ ] Build input form
   - [ ] Define all necessary textField props
+  - [ ] Figure out how to handle state updates from field inputs
 - [ ] Build guideline rendering engine
 - [ ] Make it exportable
 - [ ] Make it all pretty
@@ -19,14 +20,14 @@
     * If it's nib width in millimeters, make the step 0.1mm increments
   * Presets for common styles (dropdown menu listing Italic, Bookhand, Blackletter, etc), but all measurements are text fields and can be modified (see nib width note).
   * Baseline: this line is generated based on other user input (ascender height, x-height) but is not directly user defined.
-3. X-height
-4. Ascender height
-5. Descender height
-6. Caps height
-7. (maybe) Branching line for italic
-8. Interlinear spacing (distance from the descender height of a line to the ascender height of the line below it)
+2. X-height
+3. Ascender height
+4. Descender height
+5. Caps height
+6. (maybe) Branching line for italic
+7. Interlinear spacing (distance from the descender height of a line to the ascender height of the line below it)
 
-// TODO: Ask Cora if it's more useful to use "nib widths" as the unit for 3-8, or to set them as measurements directly using "mm"
+// TODO: Ask Cora if it's more useful to use "nib widths" as the unit for 3-7, or to set them as measurements directly using "mm"
 
 ### Vertical of letters
 * Note that for angle of vertical for letters x-axis is 90 degrees, y-axis is 0 degrees, and angle of vertical is given as degrees off of y-axis, different from pen angle, below. (Good opportunity for a visual reference next to input field).
