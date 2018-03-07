@@ -24,7 +24,6 @@ const Drawer = props => (
           <TextField
             id="Nib width"
             label="Nib width"
-            name="number"
             type="number"
             margin="normal"
             helperText="The width of your nib in millimeters"
@@ -45,7 +44,6 @@ const Drawer = props => (
           <TextField
             id="x-height"
             label="X-height"
-            name="number"
             type="number"
             margin="normal"
             helperText="The distance between the baseline and the x-height in nib widths"
@@ -61,6 +59,19 @@ const Drawer = props => (
 
       </CardContent>
     </Card>
+
+    <Card>
+      <CardContent>
+        <Typography>Guideline indicators</Typography>
+
+        {/* X indicator */}
+        <div>
+          {/* Add checkboxes with labels here */}
+        </div>
+
+      </CardContent>
+    </Card>
+
   </MuiDrawer>
 );
 

@@ -3,8 +3,9 @@
 ## Roadmap
 
 - [ ] Build input form
-  - [ ] Define all necessary textField props
+  - [ ] Figure out how to implement checkboxes with labels
   - [ ] Figure out how to handle state updates from field inputs
+  - [ ] Create custom input field component, and figure out how to add instance-specific variations
 - [ ] Build guideline rendering engine
 - [ ] Make it exportable
 - [ ] Make it all pretty
@@ -27,7 +28,7 @@
 6. (maybe) Branching line for italic
 7. Interlinear spacing (distance from the descender height of a line to the ascender height of the line below it)
 
-// TODO: Ask Cora if it's more useful to use "nib widths" as the unit for 3-7, or to set them as measurements directly using "mm"
+// TODO: Ask Cora if it's more useful to use "nib widths" as the unit for 3-7, or to set them as measurements directly using "mm". This seems like an especially good question for 7.
 
 ### Vertical of letters
 * Note that for angle of vertical for letters x-axis is 90 degrees, y-axis is 0 degrees, and angle of vertical is given as degrees off of y-axis, different from pen angle, below. (Good opportunity for a visual reference next to input field).
