@@ -1,1 +1,2 @@
-import './Drawer.story.js';
+import './Drawer.story';
+import './Checkbox.story';

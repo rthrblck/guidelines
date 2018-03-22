@@ -4,8 +4,10 @@
 
 - [ ] Build input form
   - [ ] Figure out how to implement checkboxes with labels
-  - [ ] Figure out how to handle state updates from field inputs
+  - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
   - [ ] Create custom input field component, and figure out how to add instance-specific variations
+  - [ ] Is Formgroup (currently used in test Checkbox component) useful for putting together each Card's input fields?
+
 - [ ] Build guideline rendering engine
 - [ ] Make it exportable
 - [ ] Make it all pretty
