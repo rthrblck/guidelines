@@ -3,10 +3,13 @@
 ## Roadmap
 
 - [ ] Build input form
-  - [ ] Figure out how to implement checkboxes with labels
+  - [x] Figure out how to implement checkboxes with labels
+  - [ ] Learn the basics of writing Storybook stories.
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
+    - [ ] Define all input field states
+    - [ ] Define all props needed for states
   - [ ] Create custom input field component, and figure out how to add instance-specific variations
-  - [ ] Is Formgroup (currently used in test Checkbox component) useful for putting together each Card's input fields?
+  - [ ] Is Formgroup (currently used in test Checkbox component) useful for putting together each Card's input fields? If so, use it to create the initial groups of input fields.
 
 - [ ] Build guideline rendering engine
 - [ ] Make it exportable
