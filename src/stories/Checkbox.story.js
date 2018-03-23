@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+// import { action } from '@storybook/addon-actions';
 
 import MyCheckbox from '../Checkbox';
 
-const actionLogger = action('checked');
+// const actionLogger = action('checked');
 
 class FakeApp extends React.Component {
   state = {
@@ -18,7 +18,7 @@ class FakeApp extends React.Component {
   };
 
   checkedAHandleChange = (event) => {
-    actionLogger('old', this.state.checkedA, 'new', event.target.checked);
+    // actionLogger('old', this.state.checkedA, 'new', event.target.checked);
     this.setState({ checkedA: event.target.checked });
   };
 
