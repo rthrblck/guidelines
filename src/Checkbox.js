@@ -1,17 +1,18 @@
 import React from 'react';
 import { FormGroup, FormControlLabel, FormHelperText } from 'material-ui/Form';
 import Checkbox from 'material-ui/Checkbox';
+import PropTypes from 'prop-types';
 
 
 class MyCheckbox extends React.Component {
-  state = {
-    checkedA: true,
-  };
-
-  // This will need to moved to the App level
-  handleChange = name => (event) => {
-    this.setState({ [name]: event.target.checked });
-  };
+  // state = {
+  //   checkedA: true,
+  // };
+  //
+  // // This will need to moved to the App level
+  // handleChange = name => (event) => {
+  //   this.setState({ [name]: event.target.checked });
+  // };
 
   render() {
     return (
@@ -19,8 +20,8 @@ class MyCheckbox extends React.Component {
         <FormControlLabel
           control={
             <Checkbox
-              checked={this.state.checkedA}
-              onChange={this.handleChange('checkedA')}
+              checked={this.props.checked}
+              onChange={this.props.changeHandler}
               value="checkedA"
             />
           }
@@ -31,5 +32,10 @@ class MyCheckbox extends React.Component {
     );
   }
 }
+
+MyCheckbox.propTypes = {
+  checked: PropTypes.bool,
+  changeHandler: PropTypes.func,
+};
 
 export default MyCheckbox;
