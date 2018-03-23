@@ -4,8 +4,9 @@
 
 - [ ] Build input form
   - [x] Figure out how to implement checkboxes with labels
-  - [ ] Learn the basics of writing Storybook stories.
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
+    - [x] Implement a checkbox with the brains in Storybook
+    - [ ] Implement a second checkbox to abstract the checkbox identity
     - [ ] Define all input field states
     - [ ] Define all props needed for states
   - [ ] Create custom input field component, and figure out how to add instance-specific variations
