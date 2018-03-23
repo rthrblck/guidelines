@@ -5,7 +5,8 @@
 - [ ] Build input form
   - [x] Figure out how to implement checkboxes with labels
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
-    - [x] Implement a checkbox with the brains in Storybook
+    - [x] Implement a checkbox changeHandler in Storybook
+    - [ ] Convert Checkbox component from class component to functional component
     - [ ] Implement a second checkbox to abstract the checkbox identity
     - [ ] Define all input field states
     - [ ] Define all props needed for states
