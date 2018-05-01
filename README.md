@@ -7,9 +7,10 @@
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
     - [x] Implement a checkbox changeHandler in Storybook
     - [x] Convert Checkbox component from class component to functional component
-    - [ ] Implement a second checkbox to abstract the checkbox identity
+    - [ ] Figure out how to abstract changeHandlers to use them with multiple field inputs an repeat less code. According to Alan, setting the state props (are they props?) should be done manually and individually to be more human friendly, but instead of writing a changeHandler for each input field that should be abstracted. Implement a second checkbox to abstract the checkbox identity
     - [ ] Define all input field states
     - [ ] Define all props needed for states
+    - [ ] Implement basic forms of all user input fields, with appropriate naming.
   - [ ] Create custom input field component, and figure out how to add instance-specific variations
   - [ ] Is Formgroup (currently used in test Checkbox component) useful for putting together each Card's input fields? If so, use it to create the initial groups of input fields.
 - [ ] Build app level component that contains all needed state infrastructure
@@ -17,6 +18,7 @@
 - [ ] Build guideline rendering engine
 - [ ] Make it exportable
 - [ ] Make it all pretty
+  - [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level.
 
 
 ## Feature Notes
