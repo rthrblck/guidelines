@@ -14,9 +14,9 @@ export const MyCheckbox = props => (
           value="checkedA"
         />
       }
-      label="Nib marks"
+      label="The first checkbox"
     />
-    <FormHelperText>Check here to include nib marks in the left margin</FormHelperText>
+    <FormHelperText>This is some helper text</FormHelperText>
   </FormGroup>
 );
 

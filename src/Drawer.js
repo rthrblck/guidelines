@@ -35,6 +35,7 @@ const Drawer = props => (
               step: '0.1',
               min: '0',
             }}
+            value={props.nibWidth}
 
           />
         </div>
@@ -77,5 +78,6 @@ const Drawer = props => (
 
 export default Drawer;
 
+// TODO: Implement changeHandler to trigger state updates
 // TODO: Group multiple textFields on Card
 // TODO: Group multiple Cards in Drawer

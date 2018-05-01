@@ -6,12 +6,13 @@
   - [x] Figure out how to implement checkboxes with labels
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
     - [x] Implement a checkbox changeHandler in Storybook
-    - [ ] Convert Checkbox component from class component to functional component
+    - [x] Convert Checkbox component from class component to functional component
     - [ ] Implement a second checkbox to abstract the checkbox identity
     - [ ] Define all input field states
     - [ ] Define all props needed for states
   - [ ] Create custom input field component, and figure out how to add instance-specific variations
   - [ ] Is Formgroup (currently used in test Checkbox component) useful for putting together each Card's input fields? If so, use it to create the initial groups of input fields.
+- [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
 - [ ] Make it exportable
