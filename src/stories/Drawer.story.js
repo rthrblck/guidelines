@@ -7,20 +7,20 @@ import { storiesOf } from '@storybook/react';
 import Drawer from '../Drawer';
 
 class DrawerApp extends React.Component {
-  state={
-    nibWidth: 'this.state.nibWidth',
+  constructor(props) {
+    super(props);
+    this.state = { nibWidth: '' };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = name => (event) => {
-    this.setState({ [name]: event.target.nibWidth });
-  };
+  handleChange(event) {
+    this.setState({ nibWidth: event.target.nibWidth });
+  }
 
   render() {
     return (
-      <Drawer
-        onChange={this.handleChange('nibWidth')}
-        nibWidth={this.state.nibWidth}
-      />
+      <Drawer />
     );
   }
 }
