@@ -36,7 +36,6 @@ const Drawer = props => (
               min: '0',
             }}
             value={props.nibWidth}
-            onChange={this.handleChange}
 
           />
         </div>
