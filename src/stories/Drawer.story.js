@@ -15,7 +15,7 @@ class DrawerApp extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({ nibWidth: event.target.nibWidth });
+    this.setState({ [name]: event.target.nibWidth });
   }
 
   render() {
