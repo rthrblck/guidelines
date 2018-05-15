@@ -36,6 +36,7 @@ const Drawer = props => (
               min: '0',
             }}
             value={props.nibWidth}
+            onChange={props.handleNibWidthChange}
 
           />
         </div>
@@ -55,6 +56,8 @@ const Drawer = props => (
             inputProps={{
               step: '0.1',
             }}
+            value={props.xHeight}
+            onChange={props.handleXHeightChange}
           />
         </div>
 
