@@ -166,11 +166,66 @@ const Drawer = props => (
 
     <Card>
       <CardContent>
-        <Typography>Guideline indicators</Typography>
+        <Typography>Verticality and pen angle</Typography>
 
-        {/* X indicator */}
         <div>
-          {/* Add checkboxes with labels here */}
+          {/* Verticality of letters */}
+          <TextField
+            id="vert"
+            label="Verticality of letters"
+            type="number"
+            margin="normal"
+            helperText="The angle of the vertical strokes of the letters, in degrees"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">degrees</InputAdornment>,
+            }}
+            inputProps={{
+              step: '1',
+            }}
+            value={props.vert}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          {/* Distance between verticals */}
+          <TextField
+            id="vertSpace"
+            label="Distance between verticals"
+            type="number"
+            margin="normal"
+            helperText="The distance between the lines showing the angle of vertical strokes, in millimeters"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+            }}
+            inputProps={{
+              step: '1',
+            }}
+            value={props.vertSpace}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          {/* Pen angle */}
+          <TextField
+            id="penAngle"
+            label="Pen angle"
+            type="number"
+            margin="normal"
+            helperText="The angle of the flat edge of the nib in relation to the horzizontal lines, in degrees"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">degrees</InputAdornment>,
+            }}
+            inputProps={{
+              step: '1',
+            }}
+            value={props.penAngle}
+            onChange={props.handleChange}
+          />
         </div>
 
       </CardContent>

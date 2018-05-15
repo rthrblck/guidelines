@@ -10,6 +10,7 @@ class DrawerApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // Fundamental lines
       nibWidth: 3,
       xHeight: 5,
       aHeight: 5,
@@ -17,6 +18,10 @@ class DrawerApp extends React.Component {
       cHeight: 4,
       bHeight: 0,
       iSpace: 1,
+      // Verticality and pen angle
+      vert: 90,
+      vertSpace: 10,
+      penAngle: 0,
     };
 
     this.handleChange = this.handleChange.bind(this);
