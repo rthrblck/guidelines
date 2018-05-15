@@ -14,26 +14,22 @@ class DrawerApp extends React.Component {
       xHeight: 5,
     };
 
-    this.handleNibWidthChange = this.handleNibWidthChange.bind(this);
-    this.handleXHeightChange = this.handleXHeightChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleNibWidthChange(event) {
-    this.setState({ nibWidth: event.target.value });
-  }
+  // handleChange uses input id as state key,
+  // so keep input ids consistent with state variable names
 
-  handleXHeightChange(event) {
-    console.log(event);
-    this.setState({ xHeight: event.target.value });
+  handleChange(event) {
+    const name = event.target.id;
+    this.setState({ [name]: event.target.value });
   }
 
   render() {
     return (
       <Drawer
-        nibWidth={this.state.nibWidth}
-        handleNibWidthChange={this.handleNibWidthChange}
-        xHeight={this.state.xHeight}
-        handleXHeightChange={this.handleXHeightChange}
+        {...this.state}
+        handleChange={this.handleChange}
       />
     );
   }

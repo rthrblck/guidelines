@@ -22,7 +22,7 @@ const Drawer = props => (
         <div>
           {/* Nib Width */}
           <TextField
-            id="Nib width"
+            id="nibWidth"
             label="Nib width"
             type="number"
             margin="normal"
@@ -36,7 +36,7 @@ const Drawer = props => (
               min: '0',
             }}
             value={props.nibWidth}
-            onChange={props.handleNibWidthChange}
+            onChange={props.handleChange}
 
           />
         </div>
@@ -44,7 +44,7 @@ const Drawer = props => (
         <div>
           {/* X-height */}
           <TextField
-            id="x-height"
+            id="xHeight"
             label="X-height"
             type="number"
             margin="normal"
@@ -57,7 +57,7 @@ const Drawer = props => (
               step: '0.1',
             }}
             value={props.xHeight}
-            onChange={props.handleXHeightChange}
+            onChange={props.handleChange}
           />
         </div>
 
