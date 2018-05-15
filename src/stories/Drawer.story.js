@@ -10,8 +10,13 @@ class DrawerApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      nibWidth: 7,
+      nibWidth: 3,
       xHeight: 5,
+      aHeight: 5,
+      dHeight: 5,
+      cHeight: 4,
+      bHeight: 0,
+      iSpace: 1,
     };
 
     this.handleChange = this.handleChange.bind(this);

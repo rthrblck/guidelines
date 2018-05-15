@@ -7,7 +7,8 @@
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
     - [x] Implement a checkbox changeHandler in Storybook
     - [x] Convert Checkbox component from class component to functional component
-    - [ ] Figure out how to abstract changeHandlers to use them with multiple field inputs an repeat less code. According to Alan, setting the state props (are they props?) should be done manually and individually to be more human friendly, but instead of writing a changeHandler for each input field that should be abstracted. Implement a second checkbox to abstract the checkbox identity
+    - [x] Figure out how to abstract changeHandlers to use them with multiple field inputs an repeat less code. According to Alan, setting the state props (are they props?) should be done manually and individually to be more human friendly, but instead of writing a changeHandler for each input field that should be abstracted. Implement a second checkbox to abstract the checkbox identity
+    - [ ] Create all input fields with corresponding App level infrastructure
     - [ ] Define all input field states
     - [ ] Define all props needed for states
     - [ ] Implement basic forms of all user input fields, with appropriate naming.

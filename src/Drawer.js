@@ -61,6 +61,106 @@ const Drawer = props => (
           />
         </div>
 
+        <div>
+          {/* Ascender height */}
+          <TextField
+            id="aHeight"
+            label="Ascender height"
+            type="number"
+            margin="normal"
+            helperText="The distance between the x-height and the ascender line in nib widths"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
+            }}
+            inputProps={{
+              step: '0.1',
+            }}
+            value={props.aHeight}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          {/* Descender height */}
+          <TextField
+            id="dHeight"
+            label="Descender height"
+            type="number"
+            margin="normal"
+            helperText="The distance between the baseline and the descender line in nib widths"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
+            }}
+            inputProps={{
+              step: '0.1',
+            }}
+            value={props.dHeight}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          {/* Capital letter height */}
+          <TextField
+            id="cHeight"
+            label="Capital letter height"
+            type="number"
+            margin="normal"
+            helperText="The distance between the baseline and the capital letter line in nib widths"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
+            }}
+            inputProps={{
+              step: '0.1',
+            }}
+            value={props.cHeight}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          {/* Branching line */}
+          <TextField
+            id="bHeight"
+            label="Branching-line height"
+            type="number"
+            margin="normal"
+            helperText="The distance between the baseline and the branching-line for Italic, in nib widths"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
+            }}
+            inputProps={{
+              step: '0.1',
+            }}
+            value={props.bHeight}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          {/* Interlinear spacing */}
+          <TextField
+            id="iSpace"
+            label="Interlinear spacing"
+            type="number"
+            margin="normal"
+            helperText="The distance between the descender line of one row and the ascender line of the row below it, in nib widths"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
+            }}
+            inputProps={{
+              step: '0.1',
+            }}
+            value={props.iSpace}
+            onChange={props.handleChange}
+          />
+        </div>
+
       </CardContent>
     </Card>
 
