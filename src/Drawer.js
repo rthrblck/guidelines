@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MuiDrawer from '@material-ui/core/Drawer';
+import Drawer from '@material-ui/core/Drawer';
 import Card, { CardContent } from '@material-ui/core/Card';
 import Checkbox from '@material-ui/core/Checkbox';
 
@@ -11,8 +11,8 @@ import TextField from '@material-ui/core/TextField';
 // InputAdornment imports
 import { InputAdornment } from '@material-ui/core/Input';
 
-const Drawer = props => (
-  <MuiDrawer
+const InputDrawer = props => (
+  <Drawer
     variant="permanent"
   >
     <div />
@@ -239,10 +239,10 @@ const Drawer = props => (
       </CardContent>
     </Card>
 
-  </MuiDrawer>
+  </Drawer>
 );
 
-export default Drawer;
+export default InputDrawer;
 
 // TODO: Add checkboxes for margin indicators for x-height and nib width
 // ladders to Fundamental Guidelines Card

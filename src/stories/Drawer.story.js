@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 // import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
 
-import Drawer from '../Drawer';
+import InputDrawer from '../Drawer';
 
 class DrawerApp extends React.Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class DrawerApp extends React.Component {
 
   render() {
     return (
-      <Drawer
+      <InputDrawer
         {...this.state}
         handleChange={this.handleChange}
       />
