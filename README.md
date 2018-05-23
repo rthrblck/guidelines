@@ -55,7 +55,7 @@
 1. Pen angle
 2. Distance between pen angle lines: default measurements that can be changed, same "x.x mm" as above
 
-// TODO: As Cora what the range of possible angles is.
+// TODO: Ask Cora what the range of possible angles is.
 
 ### Guideline indicators
 1. "X" marker in left margin between base-line and x-height line: toggle on/off

@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "material-ui": "^1.0.0-beta.35",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "@material-ui/core": "^1.0.0",
+    "material-ui": "^0.20.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "react-scripts": "1.1.1"
   },
   "scripts": {
@@ -17,16 +18,16 @@
     "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.3.14",
-    "@storybook/addon-links": "^3.3.14",
-    "@storybook/addons": "^3.3.14",
-    "@storybook/react": "^3.3.14",
-    "ajv": "^6.2.1",
-    "babel-core": "^6.26.0",
-    "eslint": "^4.18.2",
+    "@storybook/addon-actions": "^3.4.5",
+    "@storybook/addon-links": "^3.4.5",
+    "@storybook/addons": "^3.4.5",
+    "@storybook/react": "^3.4.5",
+    "ajv": "^6.5.0",
+    "babel-core": "^6.26.3",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.8.2"
   }
 }

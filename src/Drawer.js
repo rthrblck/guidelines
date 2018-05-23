@@ -1,14 +1,15 @@
 import React from 'react';
 
-import MuiDrawer from 'material-ui/Drawer';
-import Card, { CardContent } from 'material-ui/Card';
+import MuiDrawer from '@material-ui/core/Drawer';
+import Card, { CardContent } from '@material-ui/core/Card';
+import Checkbox from '@material-ui/core/Checkbox';
 
 // TextField imports
-import Typography from 'material-ui/Typography';
-import TextField from 'material-ui/TextField';
+import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
 
 // InputAdornment imports
-import { InputAdornment } from 'material-ui/Input';
+import { InputAdornment } from '@material-ui/core/Input';
 
 const Drawer = props => (
   <MuiDrawer
@@ -231,11 +232,18 @@ const Drawer = props => (
       </CardContent>
     </Card>
 
+    <Card>
+      <CardContent>
+        <Typography>Verticality and pen angle</Typography>
+
+      </CardContent>
+    </Card>
+
   </MuiDrawer>
 );
 
 export default Drawer;
 
-// TODO: Implement changeHandler to trigger state updates
-// TODO: Group multiple textFields on Card
-// TODO: Group multiple Cards in Drawer
+// TODO: Add checkboxes for margin indicators for x-height and nib width
+// ladders to Fundamental Guidelines Card
+// TODO: Add Paper Options card
