@@ -19,6 +19,10 @@
 - [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
+  - [x] Render one SVG element in storybook
+  - [ ] Render one SVG line
+    - [ ] Add angle to the SVG line
+
 - [ ] Make it exportable
 - [ ] Make it all pretty
   - [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level.
