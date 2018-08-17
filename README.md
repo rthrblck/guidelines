@@ -19,9 +19,12 @@
 - [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
-  - [x] Render one SVG element in storybook
-  - [ ] Render one SVG line
-    - [ ] Add angle to the SVG line
+  - [ ] Get SVG lines to render
+    - [x] Render one SVG element in storybook
+    - [x] Render one SVG line
+      - [x] Add angle to the SVG line
+    - [ ] Figure out why vertical and horizontal lines are getting cut off around 150 pixels on the y axis (is it a div height thing?)
+    - [ ] See if the SVG `rotate` option is useful, or if it's better to just render diagonal lines using x/y coordinates
 
 - [ ] Make it exportable
 - [ ] Make it all pretty
