@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SVG = props => (
-  <svg>
+  <svg width="1000" height="1000">
 
     <g stroke="black" >
       <line
@@ -28,6 +28,7 @@ const SVG = props => (
         strokeWidth="1"
       />
     </g>
+
   </svg>
 );
 
