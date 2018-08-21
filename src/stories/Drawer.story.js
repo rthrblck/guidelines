@@ -48,5 +48,5 @@ class DrawerApp extends React.Component {
 
 storiesOf('Drawer', module)
   .add('initial setup', () => (
-    <DrawerApp />
+    <InputDrawer />
   ));
