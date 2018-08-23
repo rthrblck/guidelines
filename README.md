@@ -19,12 +19,19 @@
 - [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
-  - [ ] Get SVG lines to render
-    - [x] Render one SVG element in storybook
-    - [x] Render one SVG line
-      - [x] Add angle to the SVG line
-    - [ ] Figure out why vertical and horizontal lines are getting cut off around 150 pixels on the y axis (is it a div height thing?)
-    - [ ] See if the SVG `rotate` option is useful, or if it's better to just render diagonal lines using x/y coordinates
+    - [x] Get SVG lines to render
+      - [x] Render one SVG element in storybook
+      - [x] Render one SVG line
+        - [x] Add angle to the SVG line
+      - [x] Figure out why vertical and horizontal lines are getting cut off around 150 pixels on the y axis (is it a div height thing?)
+    - [x] See if the SVG `rotate` option is useful, or if it's better to just render diagonal lines using x/y coordinates
+    - [x] Create `groups` of lines within SVG to simulate a single instance of a complete guideline set
+    - [ ] Convert lines from hard coded elements to auto-generated elements
+      - [x] Generate a single line from an array containing line object
+      - [ ] Pass down array (and maybe the line-drawing function?) through props
+      - [ ] Render a group of lines using the above machinery
+
+  - [ ] Find/build mm to pixel conversion tool (https://stackoverflow.com/questions/7650413/pixel-to-mm-equation)
 
 - [ ] Make it exportable
 - [ ] Make it all pretty
@@ -53,7 +60,7 @@
 ### Vertical of letters
 * Note that for angle of vertical for letters x-axis is 90 degrees, y-axis is 0 degrees, and angle of vertical is given as degrees off of y-axis, different from pen angle, below. (Good opportunity for a visual reference next to input field).
 * Need to find out if verticals can be negative (negative slope from left to right).
-1. Slant of vertical: 90 to 1 degree, I think.
+1. Slant of vertical: 90 to 0 degrees, I think.
 2. Distance between vertical lines: default measurements that can be changed, same "x.x mm" as above
 
 // TODO: As Cora what the range of possible angles is.
