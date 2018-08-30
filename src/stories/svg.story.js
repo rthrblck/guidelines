@@ -14,37 +14,45 @@ const lineArray = [
     stroke: 'red',
     transform: 'rotate(60,50,0)',
   },
+  {
+    x1: '100',
+    y1: '0',
+    x2: '100',
+    y2: '1000',
+    strokeWidth: '1',
+    stroke: 'red',
+    transform: 'rotate(60,100,0)',
+  },
+  {
+    x1: '150',
+    y1: '0',
+    x2: '150',
+    y2: '1000',
+    strokeWidth: '1',
+    stroke: 'red',
+    transform: 'rotate(60,150,0)',
+  },
 ];
+
+// Not sure how to structure this function for clean prop passing. Maybe it needs a `this` binding?
+// lineArray.map(line =>
+//   <line {...line} />);
 
 class MySVG extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      // Fundamental lines
-      nibWidth: 3,
-      xHeight: 5,
-      aHeight: 5,
-      dHeight: 5,
-      cHeight: 4,
-      bHeight: 0,
-      iSpace: 1,
-      // Verticality and pen angle
-      vert: 60,
-      vertSpace: 10,
-      penAngle: 0,
-    };
   }
 
   render() {
     return (
-      <SVG
-        lineArray={lineArray}
-      />
+      <SVG />
     );
   }
 }
 
 storiesOf('svg', module)
   .add('initial setup', () => (
-    <SVG />
+    <SVG
+      lineArray={lineArray}
+    />
   ));
