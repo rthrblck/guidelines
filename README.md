@@ -26,15 +26,17 @@
       - [x] Figure out why vertical and horizontal lines are getting cut off around 150 pixels on the y axis (is it a div height thing?)
     - [x] See if the SVG `rotate` option is useful, or if it's better to just render diagonal lines using x/y coordinates
     - [x] Create `groups` of lines within SVG to simulate a single instance of a complete guideline set
-    - [ ] Convert lines from single component coding to props-based elements
+    - [x] Convert lines from single component coding to props-based elements
       - [x] Generate a single line from an array containing line object
       - [x] Pass down array through props to the SVG component
-      - [ ] Render a group of lines using the above machinery
+      - [x] Render a group of lines using the above machinery
         - [x] Figure out why lines are seem to have a break between them, pushing the next line down (Update: they didn't have a break, I was forgetting to change the rotation origin of the `transform` styling)
-
-  - [ ] Find/build mm to pixel conversion tool (https://stackoverflow.com/questions/7650413/pixel-to-mm-equation)
+    - [x] Define all SVG element attributes
 
 - [ ] Make it exportable
+  - [ ] Find tool to export SVG to PDF (must be exported at precise size)
+    - [ ] wkhtmltopdf? Does it allow setting size of SVG in PDF using real world units?
+
 - [ ] Make it all pretty
   - [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level.
 
