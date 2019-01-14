@@ -2,8 +2,6 @@
 
 ## Roadmap
 
-- [ ] Figure out why updating to Material-ui v1.0.0 (concurrently with v0.2.0) broke everything. It seems to have something to do with how I'm importing/exporting the components, maybe a difference in the Default vs Named export syntax that I'm not getting.
-
 - [ ] Build input form
   - [x] Figure out how to implement checkboxes with labels
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
