@@ -2,9 +2,8 @@
 
 ## Roadmap
 
-- [ ] Figure out why updating to Material-ui v1.0.0 (concurrently with v0.2.0) broke everything. It seems to have something to do with how I'm importing/exporting the components, maybe a difference in the Default vs Named export syntax that I'm not getting.
-
 - [ ] Build input form
+  - [ ] Why does the Drawer not scroll? Why are the Cards constrained by the dimensions of the Drawer?
   - [x] Figure out how to implement checkboxes with labels
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
     - [x] Implement a checkbox changeHandler in Storybook
@@ -19,19 +18,22 @@
 - [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
-    - [x] Get SVG lines to render
-      - [x] Render one SVG element in storybook
-      - [x] Render one SVG line
-        - [x] Add angle to the SVG line
-      - [x] Figure out why vertical and horizontal lines are getting cut off around 150 pixels on the y axis (is it a div height thing?)
-    - [x] See if the SVG `rotate` option is useful, or if it's better to just render diagonal lines using x/y coordinates
-    - [x] Create `groups` of lines within SVG to simulate a single instance of a complete guideline set
-    - [x] Convert lines from single component coding to props-based elements
-      - [x] Generate a single line from an array containing line object
-      - [x] Pass down array through props to the SVG component
-      - [x] Render a group of lines using the above machinery
-        - [x] Figure out why lines are seem to have a break between them, pushing the next line down (Update: they didn't have a break, I was forgetting to change the rotation origin of the `transform` styling)
-    - [x] Define all SVG element attributes
+  - [ ] Generate a single iteration of the Ascender, X-Height, and Descender lines, hard coded.
+    - [ ] Generate the same lines but using values from props.
+    - [ ] Generate the same lines, but incorporating the values of the other line variables to keep the relative spacing the same (that is, if n=nibWidth and AscenderHeight=an and X-Height=xn, then X-Height on-page placement=an+xn)
+  - [x] Get SVG lines to render
+    - [x] Render one SVG element in storybook
+    - [x] Render one SVG line
+      - [x] Add angle to the SVG line
+    - [x] Figure out why vertical and horizontal lines are getting cut off around 150 pixels on the y axis (is it a div height thing?)
+  - [x] See if the SVG `rotate` option is useful, or if it's better to just render diagonal lines using x/y coordinates
+  - [x] Create `groups` of lines within SVG to simulate a single instance of a complete guideline set
+  - [x] Convert lines from single component coding to props-based elements
+    - [x] Generate a single line from an array containing line object
+    - [x] Pass down array through props to the SVG component
+    - [x] Render a group of lines using the above machinery
+      - [x] Figure out why lines are seem to have a break between them, pushing the next line down (Update: they didn't have a break, I was forgetting to change the rotation origin of the `transform` styling)
+  - [x] Define all SVG element attributes
 
 - [ ] Make it exportable
   - [ ] Find tool to export SVG to PDF (must be exported at precise size)
