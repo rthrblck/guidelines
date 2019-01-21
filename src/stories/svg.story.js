@@ -4,39 +4,40 @@ import { storiesOf } from '@storybook/react';
 
 import SVG from '../svg';
 
-// const lineArray = [
-//   {
-//     x1: '50',
-//     y1: '0',
-//     x2: '50',
-//     y2: '1000',
-//     strokeWidth: '1',
-//     stroke: 'red',
-//     transform: 'rotate(60,50,0)',
-//   },
-//   {
-//     x1: '100',
-//     y1: '0',
-//     x2: '100',
-//     y2: '1000',
-//     strokeWidth: '1',
-//     stroke: 'red',
-//     transform: 'rotate(60,100,0)',
-//   },
-//   {
-//     x1: '150',
-//     y1: '0',
-//     x2: '150',
-//     y2: '1000',
-//     strokeWidth: '1',
-//     stroke: 'red',
-//     transform: 'rotate(60,150,0)',
-//   },
-// ];
-
-// Not sure how to structure this function for clean prop passing. Maybe it needs a `this` binding?
-// lineArray.map(line =>
-//   <line {...line} />);
+const lineArray = [
+  {
+    x1: '0',
+    y1: '10',
+    x2: '1000',
+    y2: '10',
+    strokeWidth: '1',
+    stroke: 'black',
+  },
+  {
+    x1: '0',
+    y1: '30',
+    x2: '1000',
+    y2: '30',
+    strokeWidth: '1',
+    stroke: 'black',
+  },
+  {
+    x1: '0',
+    y1: '70',
+    x2: '1000',
+    y2: '70',
+    strokeWidth: '1',
+    stroke: 'black',
+  },
+  {
+    x1: '0',
+    y1: '90',
+    x2: '1000',
+    y2: '90',
+    strokeWidth: '1',
+    stroke: 'black',
+  },
+];
 
 class MySVG extends React.Component {
   constructor(props) {
@@ -52,5 +53,7 @@ class MySVG extends React.Component {
 
 storiesOf('svg', module)
   .add('initial setup', () => (
-    <SVG />
+    <SVG
+      lineArray={lineArray}
+    />
   ));
