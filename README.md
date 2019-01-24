@@ -18,8 +18,9 @@
 - [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
-  - [ ] Generate a single iteration of the Ascender, X-Height, and Descender lines, hard coded.
-    - [ ] Generate the same lines but using values from props.
+  - [ ] Generate lines so that they are calculated relative to each other
+    - [x] Generate a single iteration of the Ascender, X-Height, and Descender lines, hard coded.
+    - [x] Generate the same lines but using values from props.
     - [ ] Generate the same lines, but incorporating the values of the other line variables to keep the relative spacing the same (that is, if n=nibWidth and AscenderHeight=an and X-Height=xn, then X-Height on-page placement=an+xn)
   - [x] Get SVG lines to render
     - [x] Render one SVG element in storybook
