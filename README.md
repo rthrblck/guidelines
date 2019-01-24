@@ -2,6 +2,7 @@
 
 ## Roadmap
 
+
 - [ ] Build input form
   - [ ] Why does the Drawer not scroll? Why are the Cards constrained by the dimensions of the Drawer?
   - [x] Figure out how to implement checkboxes with labels
@@ -18,10 +19,16 @@
 - [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
-  - [ ] Generate lines so that they are calculated relative to each other
+  - [ ] Implement Jest
+    - [x] Install Jest
+    - [ ] Create a test function to confirm functionality
+  - [ ] Create function that generates lines from inputs
     - [x] Generate a single iteration of the Ascender, X-Height, and Descender lines, hard coded.
     - [x] Generate the same lines but using values from props.
-    - [ ] Generate the same lines, but incorporating the values of the other line variables to keep the relative spacing the same (that is, if n=nibWidth and AscenderHeight=an and X-Height=xn, then X-Height on-page placement=an+xn)
+    - [ ] Write a function that renders a lines
+      - [ ] Change function to accept a single input, setting defaults if necessary
+      - [ ] Change function to accept multiple inputs
+      - [ ] Change function to generate multiple lines
   - [x] Get SVG lines to render
     - [x] Render one SVG element in storybook
     - [x] Render one SVG line

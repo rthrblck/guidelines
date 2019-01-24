@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.0.2",
     "material-ui": "^0.20.2",
+    "npm": "^6.7.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.1"
@@ -12,10 +13,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
+
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.10",
@@ -28,6 +30,7 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0"
   }
 }
