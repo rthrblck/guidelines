@@ -23,3 +23,9 @@ test('pushes object into array', () => {
       stroke: 'black',
     }]);
 });
+
+test('calculates user inputs to determine line interval', () =>{
+  expect(lines.calc()).toEqual(
+    lineSpacing = 30
+  );
+})

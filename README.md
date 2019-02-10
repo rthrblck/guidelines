@@ -19,16 +19,16 @@
 - [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
-  - [ ] Implement Jest
+  - [x] Implement Jest
     - [x] Install Jest
-    - [ ] Create a test function to confirm functionality
+    - [x] Create a test function to confirm functionality
   - [ ] Create function that generates lines from inputs
     - [x] Generate a single iteration of the Ascender, X-Height, and Descender lines, hard coded.
     - [x] Generate the same lines but using values from props.
-    - [ ] Write a function that renders a lines
-      - [ ] Change function to accept a single input, setting defaults if necessary
-      - [ ] Change function to accept multiple inputs
-      - [ ] Change function to generate multiple lines
+    - [ ] Render groups of lines with variable spacing
+      - [x] Write function that generates `line` object from inputs, providing defaults if they aren't given
+      - [x] Write function that pushes `line` object into an lineArray
+      - [ ] Write loop that uses previous functions to produce an array of line objects spaced according to a calculation of inputs
   - [x] Get SVG lines to render
     - [x] Render one SVG element in storybook
     - [x] Render one SVG line
