@@ -5,11 +5,11 @@ const state = {
   lM: 10,
   rM: 10,
   nW: 3,
-  iS: 2,
   pH: 1000,
-  xH: 4,
   aH: 2,
+  xH: 4,
   dH: 2,
+  iS: 2,
 };
 
 // Dumb function. Generates a line object using function args as properties with defaults as backup.
@@ -44,8 +44,8 @@ function line(
 // Might be able to handle diagonal lines as well?
 
 function lineGroup(inputs = state) {
-  // Calculate line spacing period from user inputs
-  const lineS = (inputs.xH + inputs.aH + inputs.dH + inputs.iS) * inputs.nW;
+  // Calculate line spacing period from user inputs in nib widths
+  const lineS = (inputs.aH + inputs.xH + inputs.dH + inputs.iS);
   let currentY;
   const lineArray = [];
 
