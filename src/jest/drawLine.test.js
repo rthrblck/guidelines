@@ -1,7 +1,7 @@
 const lines = require('./drawLine');
 
 test('generates a line object with default key/values', () => {
-  expect(lines.line()).toEqual(
+  expect(lines.line(y = 10)).toEqual(
     {
       x1: 0,
       y1: 10,
@@ -12,14 +12,14 @@ test('generates a line object with default key/values', () => {
     });
 });
 
-test('calculates user inputs to determine line interval', () => {
-  expect(lines.calc()).toEqual(
-    lineSpacing = 30
-  );
-})
+// test('calculates user inputs to determine line interval', () => {
+//   expect(lines.calc()).toEqual(
+//     lineS = 30
+//   );
+// })
 
-test('lineGroup with default values give me 34 lines', () => {
-  expect(lines.lineGroup().length).toEqual(34);
+test('lineGroup with default values give me 132 lines', () => {
+  expect(lines.lineGroup().length).toEqual(132);
 })
 
 test('lineGroup with default values give me an expected first line object', () => {
@@ -40,9 +40,9 @@ test('lineGroup with default values give me an expected second line object', () 
   expect(lineArray[1]).toEqual(
     {
         x1: 0,
-        y1: 40,
+        y1: 12,
         x2: 1000,
-        y2: 40,
+        y2: 12,
         strokeWidth: 1,
         stroke: 'black',
       });
@@ -53,22 +53,36 @@ test('lineGroup with default values give me an expected third line object', () =
   expect(lineArray[2]).toEqual(
     {
         x1: 0,
-        y1: 70,
+        y1: 16,
         x2: 1000,
-        y2: 70,
+        y2: 16,
         strokeWidth: 1,
         stroke: 'black',
       });
 })
+
+test('lineGroup with default values give me an expected fourth line object', () => {
+  const lineArray = lines.lineGroup()
+  expect(lineArray[3]).toEqual(
+    {
+        x1: 0,
+        y1: 18,
+        x2: 1000,
+        y2: 18,
+        strokeWidth: 1,
+        stroke: 'black',
+      });
+})
+
 
 test('lineGroup with default values give me an expected last line object', () => {
   const lineArray = lines.lineGroup()
   expect(lineArray[lineArray.length - 1]).toEqual(
     {
         x1: 0,
-        y1: 1000,
+        y1: 978,
         x2: 1000,
-        y2: 1000,
+        y2: 978,
         strokeWidth: 1,
         stroke: 'black',
       });

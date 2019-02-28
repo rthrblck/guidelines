@@ -1,12 +1,33 @@
-// Dumb function. Adds user defined inputs to generate the increment between lines. lineSpacing should end up as a global variable.
-function calc(xHeight = 4, aHeight = 2, dHeight = 2, iSpace = 2, nibWidth = 3) {
-  const nibSpacing = xHeight + aHeight + dHeight + iSpace;
-  const lineSpacing = nibSpacing * nibWidth;
-  return lineSpacing;
-}
+// First attempt at converting variables into object properties
+const state = {
+  tM: 10,
+  bM: 20,
+  lM: 10,
+  rM: 10,
+  nW: 3,
+  iS: 2,
+  pH: 1000,
+  xH: 4,
+  aH: 2,
+  dH: 2,
+};
 
-// Dumb function. Generates an object using function args as properties.
-function line(inputs = {}, defaults = {x1: 0, y1: 10, x2: 1000, y2: 10, w: 1, s: 'black'}) {
+// Dumb function. Generates a line object using function args as properties with defaults as backup.
+function line(
+  currentY,
+  defaults = {
+    x1: 0,
+    y1: 10,
+    x2: 1000,
+    y2: 10,
+    w: 1,
+    s: 'black',
+  },
+) {
+  const inputs = {
+    y1: currentY,
+    y2: currentY,
+  };
   const mergedLine = Object.assign({}, defaults, inputs)
   const line = {
     x1: mergedLine.x1,
@@ -19,28 +40,31 @@ function line(inputs = {}, defaults = {x1: 0, y1: 10, x2: 1000, y2: 10, w: 1, s:
   return line;
 }
 
-// Smart function? Manages user inputs and uses above functions to produce array of lines. Will eventually need to be able to name all of the arrays it's creating based on which guideline they render. Might eventually be able to hand diagonal guidelines as well, but that might be another function
-function lineGroup() {
-  // Define topMargin variable to use as y initialExpression
-  const topMargin = 10
-  const pageHeight = 1000
-  const lineSpacing = 30
-  // All user inputs need to be defined here
-  const lineArray = []
+// Smart function Manages user inputs and produces array of lines.
+// Might be able to handle diagonal lines as well?
+
+function lineGroup(inputs = state) {
+  // Calculate line spacing period from user inputs
+  const lineS = (inputs.xH + inputs.aH + inputs.dH + inputs.iS) * inputs.nW;
+  let currentY;
+  const lineArray = [];
+
   for (
-    // initialExpression: Y equals topMargin (10px as placeholder)
-    let y = topMargin;
-    // condition: As long as y ≤ pageHeight (1000px as placeholder)
-    y <= pageHeight;
-    // incrementExpressions: Increment y by lineSpacing (30px as placeholder)
-    y += lineSpacing
-  )
-  {
-    //statement:
-      // Call line() to generate line using current y value for y1 and y2
-    const lineX = line({y1: y, y2: y});
-    lineArray.push(lineX);
+    let y = inputs.tM;
+    y + inputs.aH + inputs.xH + inputs.dH <= inputs.pH;
+    y += lineS
+  ) {
+    const aLine = line(currentY = y);
+
+    const xLine = line(currentY = y + inputs.aH);
+
+    const bLine = line(currentY = y + inputs.aH + inputs.xH);
+
+    const dLine = line(currentY = y + inputs.aH + inputs.xH + inputs.dH);
+
+    lineArray.push(aLine, xLine, bLine, dLine);
   }
+
   return lineArray;
 }
-module.exports = { calc, line, lineGroup };
+module.exports = { line, lineGroup };
