@@ -2,7 +2,7 @@ const lines = require('./drawLine');
 
 // Horizontal line
 test('generates a horizontal line object with default key/values', () => {
-  expect(lines.horizLine(10)).toEqual({
+  expect(lines.horizLine(10, 'black')).toEqual({
     x1: 0,
     y1: 10,
     x2: 1000,

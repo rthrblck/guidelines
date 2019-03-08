@@ -6,21 +6,24 @@ const state = {
   lM: 10,
   rM: 10,
   pH: 1000,
-// Base proportions
+  // Base lines
   nW: 3,
   aH: 2,
   xH: 4,
   dH: 2,
   iS: 2,
-// Angled lines
+  bC: 'black',
+  // Angled lines
   vA: 10,
   vS: 30,
+  vC: 'gray',
   pA: 30,
   pS: 30,
+  pC: 'red',
 };
 
-// Generates a line object using function args as properties with defaults as backup. Receives single Y input and inserts it into y1 and y2.
-function horizLine(currentY) {
+// Horizontal line drawing function
+function horizLine(currentY, strokeColor) {
 // Define default and input objects
   const defaults = {
     x1: 0,
@@ -33,6 +36,7 @@ function horizLine(currentY) {
   const inputs = {
     y1: currentY,
     y2: currentY,
+    s: strokeColor,
   };
 
   // Combine default and input objects into new object
@@ -51,7 +55,7 @@ function horizLine(currentY) {
   return line;
 }
 
-// First stab at diagonal line drawing function
+// Diagonal line drawing function
 function diagLine(angle, currentX, strokeColor) {
   // Define default and input objects
   const defaults = {
@@ -99,13 +103,13 @@ function lineGroup(inputs = state) {
     y + inputs.aH + inputs.xH + inputs.dH <= inputs.pH;
     y += lineS
   ) {
-    const aLine = horizLine(y);
+    const aLine = horizLine(y, inputs.bC);
 
-    const xLine = horizLine(y + inputs.aH);
+    const xLine = horizLine(y + inputs.aH, inputs.bC);
 
-    const bLine = horizLine(y + inputs.aH + inputs.xH);
+    const bLine = horizLine(y + inputs.aH + inputs.xH, inputs.bC);
 
-    const dLine = horizLine(y + inputs.aH + inputs.xH + inputs.dH);
+    const dLine = horizLine(y + inputs.aH + inputs.xH + inputs.dH, inputs.bC);
 
     lineArray.push(aLine, xLine, bLine, dLine);
   }
@@ -119,18 +123,19 @@ function lineGroup(inputs = state) {
     // Increment by the spacing between vert lines
     x += inputs.vS
   ) {
-    const vLine = diagLine(inputs.vA, x, 'gray');
+    const vLine = diagLine(inputs.vA, x, inputs.vC);
 
     lineArray.push(vLine);
   }
 
-  // Generates array of diagonal pen angle line
+  // Generates array of diagonal pen angle lines
   for (
     let x = inputs.lM + inputs.pS;
+    // Placeholder, will need to cover visible page in lines
     x <= 2000;
     x += inputs.pS
   ) {
-    const pALine = diagLine(90 - inputs.pA, x, 'red');
+    const pALine = diagLine(90 - inputs.pA, x, inputs.pC);
 
     lineArray.push(pALine);
   }
