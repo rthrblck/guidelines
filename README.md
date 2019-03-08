@@ -2,6 +2,7 @@
 
 ## Roadmap
 
+- [ ] Update eslint config with Jest settings to eliminate false error messages
 
 - [ ] Build input form
   - [ ] Why does the Drawer not scroll? Why are the Cards constrained by the dimensions of the Drawer?
