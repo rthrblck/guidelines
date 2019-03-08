@@ -52,7 +52,7 @@ function horizLine(currentY) {
 }
 
 // First stab at diagonal line drawing function
-function diagLine(angle, currentX) {
+function diagLine(angle, currentX, strokeColor) {
   // Define default and input objects
   const defaults = {
     x1: 0,
@@ -66,6 +66,7 @@ function diagLine(angle, currentX) {
   const inputs = {
     x1: currentX,
     x2: currentX,
+    s: strokeColor,
     r: `rotate(${angle}, ${currentX}, 0)`,
   };
   // Combine default and input objects into new object
@@ -118,9 +119,20 @@ function lineGroup(inputs = state) {
     // Increment by the spacing between vert lines
     x += inputs.vS
   ) {
-    const vLine = diagLine(inputs.vA, x);
+    const vLine = diagLine(inputs.vA, x, 'gray');
 
     lineArray.push(vLine);
+  }
+
+  // Generates array of diagonal pen angle line
+  for (
+    let x = inputs.lM + inputs.pS;
+    x <= 2000;
+    x += inputs.pS
+  ) {
+    const pALine = diagLine(90 - inputs.pA, x, 'red');
+
+    lineArray.push(pALine);
   }
 
   return lineArray;

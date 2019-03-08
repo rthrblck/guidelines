@@ -14,7 +14,7 @@ test('generates a horizontal line object with default key/values', () => {
 
 // Diagonal line
 test('generates a diagonal line object with default key/values', () => {
-  expect(lines.diagLine(20, 20)).toEqual({
+  expect(lines.diagLine(20, 20, 'gray')).toEqual({
     x1: 20,
     y1: 0,
     x2: 20,
@@ -26,8 +26,8 @@ test('generates a diagonal line object with default key/values', () => {
 });
 // LineGroup
 
-test('lineGroup with default values give me 462 lines', () => {
-  expect(lines.lineGroup().length).toEqual(462);
+test('lineGroup with default values give me 528 lines', () => {
+  expect(lines.lineGroup().length).toEqual(528);
 });
 
 test('lineGroup with default values give me an expected first line object', () => {
@@ -99,7 +99,7 @@ test('lineGroup with default values give me an expected last line object', () =>
     x2: 1990,
     y2: 1000,
     strokeWidth: 1,
-    stroke: 'gray',
-    transform: 'rotate(10, 1990, 0)',
+    stroke: 'red',
+    transform: 'rotate(60, 1990, 0)',
   });
 });
