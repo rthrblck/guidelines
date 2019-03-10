@@ -6,20 +6,22 @@ import SVG from '../svg';
 
 const lineArray = [
   {
-    x1: '0',
-    y1: '10',
-    x2: '1000',
-    y2: '10',
+    x1: '10',
+    y1: '0',
+    x2: '10',
+    y2: '1000',
     strokeWidth: '1',
-    stroke: 'black',
+    stroke: 'gray',
+    transform: 'rotate(10, 10, 0)',
   },
   {
-    x1: '0',
-    y1: '30',
-    x2: '1000',
-    y2: '30',
+    x1: '30',
+    y1: '0',
+    x2: '30',
+    y2: '1000',
     strokeWidth: '1',
-    stroke: 'black',
+    stroke: 'gray',
+    transform: 'rotate(10, 10, 0)',
   },
   {
     x1: '0',

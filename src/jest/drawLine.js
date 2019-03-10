@@ -90,8 +90,6 @@ function diagLine(angle, currentX, strokeColor) {
 }
 
 // Manages user inputs and produces array of lines.
-// Might be able to handle diagonal lines as well?
-
 function lineGroup(inputs = state) {
   // Calculate line spacing period from user inputs in nib widths
   const lineS = (inputs.aH + inputs.xH + inputs.dH + inputs.iS);
@@ -114,7 +112,7 @@ function lineGroup(inputs = state) {
     lineArray.push(aLine, xLine, bLine, dLine);
   }
 
-  // Generates array of diagonal verticality lines
+  // Generates array of verticality lines
   for (
     // Starting X is left margin plus the vertical spacing
     let x = inputs.lM + inputs.vS;
@@ -128,7 +126,7 @@ function lineGroup(inputs = state) {
     lineArray.push(vLine);
   }
 
-  // Generates array of diagonal pen angle lines
+  // Generates array of pen angle lines
   for (
     let x = inputs.lM + inputs.pS;
     // Placeholder, will need to cover visible page in lines
