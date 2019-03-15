@@ -11,17 +11,25 @@ class DrawerApp extends React.Component {
     super(props);
     this.state = {
       // Fundamental lines
-      nibWidth: 3,
-      xHeight: 5,
-      aHeight: 5,
-      dHeight: 5,
-      cHeight: 4,
-      bHeight: 0,
-      iSpace: 1,
+      nW: 3,
+      xH: 5,
+      aH: 5,
+      dH: 5,
+      cH: 4,
+      bH: 0,
+      iS: 1,
       // Verticality and pen angle
-      vert: 90,
-      vertSpace: 10,
-      penAngle: 0,
+      vA: 90,
+      vS: 10,
+      pA: 0,
+      pS: 10,
+      // Page size and margins
+      pH: 800,
+      pW: 1100,
+      tM: 20,
+      bM: 30,
+      lM: 20,
+      rM: 20,
     };
 
     this.handleChange = this.handleChange.bind(this);

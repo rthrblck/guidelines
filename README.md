@@ -2,8 +2,6 @@
 
 ## Roadmap
 
-- [ ] Update eslint config with Jest settings to eliminate false error messages
-
 - [ ] Build input form
   - [ ] Why does the Drawer not scroll? Why are the Cards constrained by the dimensions of the Drawer?
   - [x] Figure out how to implement checkboxes with labels
@@ -25,19 +23,19 @@
     - [x] Install Jest
     - [x] Create a test function to confirm functionality
 
-  - [ ] Define page dimensions (size and margins)
-    - [ ] Create user inputs for pageHeight, page width, topMargin, bottomMargin, leftMargin, and rightMargin.
-    - [ ] Add page dimensions to state
+  - [x] Define page dimensions (size and margins)
+    - [x] Create user inputs for pageHeight, page width, topMargin, bottomMargin, leftMargin, and rightMargin.
+    - [x] Add page dimensions to state
 
-  - [ ] Create function that generates lines from inputs
+  - [x] Create function that generates lines from inputs
     - [x] Generate a single iteration of the Ascender, X-Height, and Descender lines, hard coded.
     - [x] Generate the same lines but using values from props.
-    - [ ] Render groups of base guidelines with variable spacing
+    - [x] Render groups of base guidelines with variable spacing
       - [x] Write function that generates `line` object from inputs, providing defaults if they aren't given
       - [x] Write function that pushes `line` object into an lineArray
       - [x] Write function that calculates lineSpacing based nibWidth size and user input proportions
-      - [ ] Write loop that uses previous functions to produce an array of lines
-    - [ ] Render groups of diagonal/vertical guidelines
+      - [x] Write loop that uses previous functions to produce an array of lines
+    - [x] Render groups of diagonal/vertical guidelines
 
   - [x] Get SVG lines to render
     - [x] Render one SVG element in storybook
