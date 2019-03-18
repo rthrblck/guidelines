@@ -13,10 +13,7 @@ import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 const InputDrawer = props => (
-  <Drawer
-    variant="permanent"
-  >
-    <div />
+  <div>
     <Card>
       <CardContent>
         <Typography>Fundamental Lines</Typography>
@@ -24,7 +21,7 @@ const InputDrawer = props => (
         <div>
           {/* Nib Width */}
           <TextField
-            id="nibWidth"
+            id="nW"
             label="Nib width"
             type="number"
             margin="normal"
@@ -34,10 +31,10 @@ const InputDrawer = props => (
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
             inputProps={{
-              step: '0.1',
+              step: '0.5',
               min: '0',
             }}
-            value={props.nibWidth}
+            value={props.nW}
             onChange={props.handleChange}
 
           />
@@ -46,7 +43,7 @@ const InputDrawer = props => (
         <div>
           {/* X-height */}
           <TextField
-            id="xHeight"
+            id="xH"
             label="X-height"
             type="number"
             margin="normal"
@@ -56,9 +53,10 @@ const InputDrawer = props => (
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
             inputProps={{
-              step: '0.1',
+              step: '0.5',
+              min: '0',
             }}
-            value={props.xHeight}
+            value={props.xH}
             onChange={props.handleChange}
           />
         </div>
@@ -66,7 +64,7 @@ const InputDrawer = props => (
         <div>
           {/* Ascender height */}
           <TextField
-            id="aHeight"
+            id="aH"
             label="Ascender height"
             type="number"
             margin="normal"
@@ -76,9 +74,10 @@ const InputDrawer = props => (
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
             inputProps={{
-              step: '0.1',
+              step: '0.5',
+              min: '0',
             }}
-            value={props.aHeight}
+            value={props.aH}
             onChange={props.handleChange}
           />
         </div>
@@ -86,7 +85,7 @@ const InputDrawer = props => (
         <div>
           {/* Descender height */}
           <TextField
-            id="dHeight"
+            id="dH"
             label="Descender height"
             type="number"
             margin="normal"
@@ -96,9 +95,10 @@ const InputDrawer = props => (
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
             inputProps={{
-              step: '0.1',
+              step: '0.5',
+              min: '0',
             }}
-            value={props.dHeight}
+            value={props.dH}
             onChange={props.handleChange}
           />
         </div>
@@ -106,7 +106,7 @@ const InputDrawer = props => (
         <div>
           {/* Capital letter height */}
           <TextField
-            id="cHeight"
+            id="cH"
             label="Capital letter height"
             type="number"
             margin="normal"
@@ -117,8 +117,9 @@ const InputDrawer = props => (
             }}
             inputProps={{
               step: '0.1',
+              min: '0',
             }}
-            value={props.cHeight}
+            value={props.cH}
             onChange={props.handleChange}
           />
         </div>
@@ -126,7 +127,7 @@ const InputDrawer = props => (
         <div>
           {/* Branching line */}
           <TextField
-            id="bHeight"
+            id="bH"
             label="Branching-line height"
             type="number"
             margin="normal"
@@ -137,8 +138,9 @@ const InputDrawer = props => (
             }}
             inputProps={{
               step: '0.1',
+              min: '0',
             }}
-            value={props.bHeight}
+            value={props.bH}
             onChange={props.handleChange}
           />
         </div>
@@ -146,7 +148,7 @@ const InputDrawer = props => (
         <div>
           {/* Interlinear spacing */}
           <TextField
-            id="iSpace"
+            id="iS"
             label="Interlinear spacing"
             type="number"
             margin="normal"
@@ -156,9 +158,10 @@ const InputDrawer = props => (
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
             inputProps={{
-              step: '0.1',
+              step: '0.5',
+              min: '0',
             }}
-            value={props.iSpace}
+            value={props.iS}
             onChange={props.handleChange}
           />
         </div>
@@ -173,7 +176,7 @@ const InputDrawer = props => (
         <div>
           {/* Verticality of letters */}
           <TextField
-            id="vert"
+            id="vA"
             label="Verticality of letters"
             type="number"
             margin="normal"
@@ -185,7 +188,7 @@ const InputDrawer = props => (
             inputProps={{
               step: '1',
             }}
-            value={props.vert}
+            value={props.vA}
             onChange={props.handleChange}
           />
         </div>
@@ -193,7 +196,7 @@ const InputDrawer = props => (
         <div>
           {/* Distance between verticals */}
           <TextField
-            id="vertSpace"
+            id="vS"
             label="Distance between verticals"
             type="number"
             margin="normal"
@@ -203,9 +206,10 @@ const InputDrawer = props => (
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
             inputProps={{
-              step: '1',
+              step: '10',
+              min: '10',
             }}
-            value={props.vertSpace}
+            value={props.vS}
             onChange={props.handleChange}
           />
         </div>
@@ -213,7 +217,7 @@ const InputDrawer = props => (
         <div>
           {/* Pen angle */}
           <TextField
-            id="penAngle"
+            id="pA"
             label="Pen angle"
             type="number"
             margin="normal"
@@ -225,7 +229,28 @@ const InputDrawer = props => (
             inputProps={{
               step: '1',
             }}
-            value={props.penAngle}
+            value={props.pA}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          {/* Distance between verticals */}
+          <TextField
+            id="pS"
+            label="Distance between pen angle lines"
+            type="number"
+            margin="normal"
+            helperText="The distance between the lines showing the pen angle strokes, in millimeters"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+            }}
+            inputProps={{
+              step: '10',
+              min: '10',
+            }}
+            value={props.pA}
             onChange={props.handleChange}
           />
         </div>
@@ -235,12 +260,132 @@ const InputDrawer = props => (
 
     <Card>
       <CardContent>
-        <Typography>Verticality and pen angle</Typography>
+        <Typography>Page Size and Margins</Typography>
+
+        <div>
+          {/* Page height */}
+          <TextField
+            id="pH"
+            label="Page Height"
+            type="number"
+            margin="normal"
+            helperText="The height of your paper, in millimeters"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+            }}
+            inputProps={{
+              step: '1',
+              min: '0',
+            }}
+            value={props.pH}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          <TextField
+            id="pW"
+            label="Page Width"
+            type="number"
+            margin="normal"
+            helperText="The width of your paper, in millimeters"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+            }}
+            inputProps={{
+              step: '1',
+              min: '0',
+            }}
+            value={props.pW}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          <TextField
+            id="tM"
+            label="Top margin"
+            type="number"
+            margin="normal"
+            helperText="The margin between the top edge of your page and the top guideline"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+            }}
+            inputProps={{
+              step: '1',
+              min: '0',
+            }}
+            value={props.tM}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          <TextField
+            id="bM"
+            label="Bottom margin"
+            type="number"
+            margin="normal"
+            helperText="The margin between the bottom edge of your page and the bottom guideline"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+            }}
+            inputProps={{
+              step: '1',
+              min: '0',
+            }}
+            value={props.bM}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          <TextField
+            id="lM"
+            label="Left margin"
+            type="number"
+            margin="normal"
+            helperText="The margin between the left edge of your page and the guidelines"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+            }}
+            inputProps={{
+              step: '1',
+              min: '0',
+            }}
+            value={props.lM}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          <TextField
+            id="rM"
+            label="Right margin"
+            type="number"
+            margin="normal"
+            helperText="The margin between the right edge of your page and the guidelines"
+            style={{ width: 200 }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
+            }}
+            inputProps={{
+              step: '1',
+              min: '0',
+            }}
+            value={props.rM}
+            onChange={props.handleChange}
+          />
+        </div>
 
       </CardContent>
     </Card>
-
-  </Drawer>
+  </div>
 );
 
 export default InputDrawer;
