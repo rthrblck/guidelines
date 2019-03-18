@@ -52,7 +52,7 @@ class MySVG extends React.Component {
 }
 
 storiesOf('svg', module)
-  .add('initial setup', () => (
+  .add('default horiz lines', () => (
     <SVG
       lineArray={lineArray}
     />
