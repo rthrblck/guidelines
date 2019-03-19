@@ -1,76 +1,31 @@
 import React from 'react';
-
-const state = {
-  pW: 600,
-  pH: 800,
-  lM: 10,
-  rM: 10,
-  tM: 0,
-  bM: 10,
-};
-
-const lineArray = [
-  {
-    x1: '0',
-    y1: '10',
-    x2: '1000',
-    y2: '10',
-    strokeWidth: '1',
-    stroke: 'black',
-  },
-  {
-    x1: '0',
-    y1: '30',
-    x2: '1000',
-    y2: '30',
-    strokeWidth: '1',
-    stroke: 'black',
-  },
-  {
-    x1: '0',
-    y1: '70',
-    x2: '1000',
-    y2: '70',
-    strokeWidth: '1',
-    stroke: 'black',
-  },
-  {
-    x1: '0',
-    y1: '90',
-    x2: '1000',
-    y2: '90',
-    strokeWidth: '1',
-    stroke: 'black',
-  },
-];
+import PropTypes from 'prop-types';
 
 const SVG = props => (
-  <svg width={state.pW} height={state.pH}>
+  <svg width={props.pageSettings.pW} height={props.pageSettings.pH}>
 
     <defs>
       <clipPath id="margins">
         <rect
-          x={state.lM}
-          y={state.tM}
-          width={state.pW - (state.lM + state.rM)}
-          height={state.pH - (state.tM + state.bM)}
+          x={props.pageSettings.lM}
+          y={props.pageSettings.tM}
+          width={props.pageSettings.pW - (props.pageSettings.lM + props.pageSettings.rM)}
+          height={props.pageSettings.pH - (props.pageSettings.tM + props.pageSettings.bM)}
         />
       </clipPath>
     </defs>
 
     <g clipPath="url(#margins)">
-      {lineArray.map(line =>
-        (<line
-          {...line}
-          stroke="red"
-        />))}
+
+      {props.lineArray.map(line =>
+        (<line {...line} />))}
     </g>
 
     <rect
-      x={state.lM}
-      y={state.tM}
-      width={state.pW - (state.lM + state.rM)}
-      height={state.pH - (state.tM + state.bM)}
+      x={props.pageSettings.lM}
+      y={props.pageSettings.tM}
+      width={props.pageSettings.pW - (props.pageSettings.lM + props.pageSettings.rM)}
+      height={props.pageSettings.pH - (props.pageSettings.tM + props.pageSettings.bM)}
       stroke="red"
       strokeWidth="1"
       fill="none"
@@ -78,5 +33,10 @@ const SVG = props => (
 
   </svg>
 );
+
+SVG.propTypes = {
+  pageSettings: PropTypes.object,
+  lineArray: PropTypes.arrayOf(PropTypes.object),
+};
 
 export default SVG;
