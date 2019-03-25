@@ -3,23 +3,25 @@
 ## Roadmap
 
 - [ ] Code cleanup before integration of modules
-  - [ ] Make sure all variable names are consistent
-  - [ ] Redefine Drawer.js as Inputs.js and update all associated links, etc. Remove Drawer div and just use a regular div for now
-  - [ ] Define all needed props in fixtures.js
-   - [ ] Define 3 state variations for Blackletter, Italic, and Bookhand styles (make them inputs into the svg component)
- - [ ] Delete unused/unnecessary files from project.
+  - [x] Make sure all variable names are consistent
+  - [x] Redefine Drawer.js as Inputs.js and update all associated links, etc. Remove Drawer div and just use a regular div for now
+  - [x] Define all needed props in fixtures.js
+  - [x] Delete unused/unnecessary files from project.
+  - [x] Add prop validation wherever it's needed
+  - [x] Fix janky svg rectangle overlay by bumping the starting y by 1 pixel and deleting the overlayed rectangle
+
 
 - [ ] Build input form
-  - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
+  - [ ] Figure out how to handle state updates from field inputs (start with Storybook using fixtures.js)
     - [ ] Create all input fields with corresponding App level infrastructure
     - [ ] Define all input field states
     - [ ] Define all props needed for states
-    - [ ] Implement basic forms of all user input fields, with appropriate naming.
-  - [ ] Create custom input field component, and figure out how to add instance-specific variations
-  - [ ] Is Formgroup (currently used in test Checkbox component) useful for putting together each Card's input fields? If so, use it to create the initial groups of input fields.
+  - [ ] Create custom input field component, and figure out how to add instance-specific variations (needed?)
 - [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
+  - [ ] Plump drawLine.js into svg.js to allow svg to use real inputs and generate real arrays of guidelines
+    - [ ] Define 3 state variations for Blackletter, Italic, and Bookhand styles (make them inputs into the svg component)
 
 - [ ] Make it exportable
   - [ ] Find tool to export SVG to PDF (must be exported at precise size)

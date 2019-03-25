@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Drawer from '@material-ui/core/Drawer';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -12,7 +11,7 @@ import TextField from '@material-ui/core/TextField';
 // InputAdornment imports
 import InputAdornment from '@material-ui/core/InputAdornment';
 
-const InputDrawer = props => (
+const Inputs = props => (
   <div>
     <Card>
       <CardContent>
@@ -235,7 +234,7 @@ const InputDrawer = props => (
         </div>
 
         <div>
-          {/* Distance between verticals */}
+          {/* Distance between pen angle lines */}
           <TextField
             id="pS"
             label="Distance between pen angle lines"
@@ -388,8 +387,7 @@ const InputDrawer = props => (
   </div>
 );
 
-export default InputDrawer;
+export default Inputs;
 
 // TODO: Add checkboxes for margin indicators for x-height and nib width
 // ladders to Fundamental Guidelines Card
-// TODO: Add Paper Options card

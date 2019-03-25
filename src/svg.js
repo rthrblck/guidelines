@@ -21,22 +21,12 @@ const SVG = props => (
         (<line {...line} />))}
     </g>
 
-    <rect
-      x={props.pageSettings.lM}
-      y={props.pageSettings.tM}
-      width={props.pageSettings.pW - (props.pageSettings.lM + props.pageSettings.rM)}
-      height={props.pageSettings.pH - (props.pageSettings.tM + props.pageSettings.bM)}
-      stroke="red"
-      strokeWidth="1"
-      fill="none"
-    />
-
   </svg>
 );
 
 SVG.propTypes = {
-  pageSettings: PropTypes.object,
-  lineArray: PropTypes.arrayOf(PropTypes.object),
+  pageSettings: PropTypes.objectOf(PropTypes.number).isRequired,
+  lineArray: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default SVG;

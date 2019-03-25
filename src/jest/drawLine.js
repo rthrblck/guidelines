@@ -97,7 +97,8 @@ function lineGroup(inputs = state) {
 
   // Generates array of the 4 basic horizontal lines.
   for (
-    let y = inputs.tM;
+    // The +1 is to address the margin clipping problem
+    let y = inputs.tM + 1;
     y + inputs.aH + inputs.xH + inputs.dH <= inputs.pH;
     y += lineS
   ) {

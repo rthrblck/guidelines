@@ -6,7 +6,7 @@ import SVG from '../svg';
 import { svgPropsBlackLetter } from '../fixtures';
 
 storiesOf('svg', module)
-  .add('BlackLetter explicit', () => (
+  .add('BlackLetter', () => (
     <SVG {...svgPropsBlackLetter} />
   ));
 // .add('BlackLetter as blue', () => {

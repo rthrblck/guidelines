@@ -4,9 +4,9 @@ import { storiesOf } from '@storybook/react';
 // import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
 
-import InputDrawer from '../Drawer';
+import Inputs from '../inputs';
 
-class DrawerApp extends React.Component {
+class InputsApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,7 +45,7 @@ class DrawerApp extends React.Component {
 
   render() {
     return (
-      <InputDrawer
+      <Inputs
         {...this.state}
         handleChange={this.handleChange}
       />
@@ -54,7 +54,7 @@ class DrawerApp extends React.Component {
 }
 
 
-storiesOf('Drawer', module)
+storiesOf('inputs', module)
   .add('initial setup', () => (
-    <InputDrawer />
+    <Inputs />
   ));
