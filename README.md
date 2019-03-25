@@ -2,13 +2,15 @@
 
 ## Roadmap
 
+- [ ] Code cleanup before integration of modules
+  - [ ] Make sure all variable names are consistent
+  - [ ] Redefine Drawer.js as Inputs.js and update all associated links, etc. Remove Drawer div and just use a regular div for now
+  - [ ] Define all needed props in fixtures.js
+   - [ ] Define 3 state variations for Blackletter, Italic, and Bookhand styles (make them inputs into the svg component)
+ - [ ] Delete unused/unnecessary files from project.
+
 - [ ] Build input form
-  - [ ] Why does the Drawer not scroll? Why are the Cards constrained by the dimensions of the Drawer?
-  - [x] Figure out how to implement checkboxes with labels
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook)
-    - [x] Implement a checkbox changeHandler in Storybook
-    - [x] Convert Checkbox component from class component to functional component
-    - [x] Figure out how to abstract changeHandlers to use them with multiple field inputs an repeat less code. According to Alan, setting the state props (are they props?) should be done manually and individually to be more human friendly, but instead of writing a changeHandler for each input field that should be abstracted. Implement a second checkbox to abstract the checkbox identity
     - [ ] Create all input fields with corresponding App level infrastructure
     - [ ] Define all input field states
     - [ ] Define all props needed for states
@@ -19,48 +21,14 @@
 
 - [ ] Build guideline rendering engine
 
-  - [x] Implement Jest
-    - [x] Install Jest
-    - [x] Create a test function to confirm functionality
-
-  - [x] Define page dimensions (size and margins)
-    - [x] Create user inputs for pageHeight, page width, topMargin, bottomMargin, leftMargin, and rightMargin.
-    - [x] Add page dimensions to state
-
-  - [x] Create function that generates lines from inputs
-    - [x] Generate a single iteration of the Ascender, X-Height, and Descender lines, hard coded.
-    - [x] Generate the same lines but using values from props.
-    - [x] Render groups of base guidelines with variable spacing
-      - [x] Write function that generates `line` object from inputs, providing defaults if they aren't given
-      - [x] Write function that pushes `line` object into an lineArray
-      - [x] Write function that calculates lineSpacing based nibWidth size and user input proportions
-      - [x] Write loop that uses previous functions to produce an array of lines
-    - [x] Render groups of diagonal/vertical guidelines
-
-  - [x] Get SVG lines to render
-    - [x] Render one SVG element in storybook
-    - [x] Render one SVG line
-      - [x] Add angle to the SVG line
-    - [x] Figure out why vertical and horizontal lines are getting cut off around 150 pixels on the y axis (is it a div height thing?)
-
-  - [x] See if the SVG `rotate` option is useful, or if it's better to just render diagonal lines using x/y coordinates
-
-  - [x] Create `groups` of lines within SVG to simulate a single instance of a complete guideline set
-
-  - [x] Convert lines from single component coding to props-based elements
-    - [x] Generate a single line from an array containing line object
-    - [x] Pass down array through props to the SVG component
-    - [x] Render a group of lines using the above machinery
-      - [x] Figure out why lines are seem to have a break between them, pushing the next line down (Update: they didn't have a break, I was forgetting to change the rotation origin of the `transform` styling)
-
-  - [x] Define all SVG element attributes
-
 - [ ] Make it exportable
   - [ ] Find tool to export SVG to PDF (must be exported at precise size)
     - [ ] wkhtmltopdf? Does it allow setting size of SVG in PDF using real world units?
 
 - [ ] Make it all pretty
   - [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level.
+  - [ ] Use "Butterick's Practical Typography" as a starting point for type decisions.
+  - [ ] Make sure contrast and text size are appropriate for all users
 
 
 ## Feature Notes
