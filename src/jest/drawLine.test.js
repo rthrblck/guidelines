@@ -1,4 +1,4 @@
-const lines = require('./drawLine');
+const lines = require('../drawLine');
 
 // Horizontal line
 test('generates a horizontal line object with default key/values', () => {

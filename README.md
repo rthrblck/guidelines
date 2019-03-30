@@ -2,15 +2,6 @@
 
 ## Roadmap
 
-- [ ] Code cleanup before integration of modules
-  - [x] Make sure all variable names are consistent
-  - [x] Redefine Drawer.js as Inputs.js and update all associated links, etc. Remove Drawer div and just use a regular div for now
-  - [x] Define all needed props in fixtures.js
-  - [x] Delete unused/unnecessary files from project.
-  - [x] Add prop validation wherever it's needed
-  - [x] Fix janky svg rectangle overlay by bumping the starting y by 1 pixel and deleting the overlayed rectangle
-
-
 - [ ] Build input form
   - [ ] Figure out how to handle state updates from field inputs (start with Storybook using fixtures.js)
     - [ ] Create all input fields with corresponding App level infrastructure
@@ -20,7 +11,7 @@
 - [ ] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
-  - [ ] Plump drawLine.js into svg.js to allow svg to use real inputs and generate real arrays of guidelines
+  - [ ] Plumb drawLine.js into svg.js to allow svg to use real inputs and generate real arrays of guidelines
     - [ ] Define 3 state variations for Blackletter, Italic, and Bookhand styles (make them inputs into the svg component)
 
 - [ ] Make it exportable

@@ -64,31 +64,31 @@ const svgPropsBlackLetter = {
 
 const appStateBlackLetter = {
 
-  basicLines: {
-    nW: 3,
-    xH: 5,
-    aH: 5,
-    dH: 5,
-    cH: 4,
-    bH: 0,
-    iS: 1,
-  },
+// Basic lines
+  nW: 3,
+  xH: 5,
+  aH: 5,
+  dH: 5,
+  cH: 4,
+  bH: 0,
+  bC: 'black',
+  iS: 1,
 
-  angleLines: {
-    vA: 90,
-    vS: 10,
-    pA: 0,
-    pS: 10,
-  },
+  // Angled lines
+  vA: 90,
+  vS: 10,
+  vC: 'gray',
+  pA: 0,
+  pS: 10,
+  pC: 'red',
 
-  pageSettings: {
-    pW: 600,
-    pH: 800,
-    lM: 10,
-    rM: 10,
-    tM: 10,
-    bM: 10,
-  },
+  // Page settings
+  pH: 850,
+  pW: 1100,
+  tM: 10,
+  bM: 10,
+  lM: 10,
+  rM: 10,
 };
 
 export { svgPropsBlackLetter, appStateBlackLetter };
