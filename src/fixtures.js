@@ -75,11 +75,11 @@ const appStateBlackLetter = {
   iS: 1,
 
   // Angled lines
-  vA: 90,
-  vS: 10,
+  vA: 10,
+  vS: 100,
   vC: 'gray',
-  pA: 0,
-  pS: 10,
+  pA: 10,
+  pS: 100,
   pC: 'red',
 
   // Page settings

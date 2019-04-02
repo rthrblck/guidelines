@@ -28,7 +28,7 @@ function horizLine(currentY, strokeColor) {
   const defaults = {
     x1: 0,
     y1: 10,
-    x2: 1000,
+    x2: 10000,
     y2: 10,
     w: 1,
     s: 'black',
@@ -62,7 +62,7 @@ function diagLine(angle, currentX, strokeColor) {
     x1: 0,
     y1: 0,
     x2: 0,
-    y2: 1000,
+    y2: 10000,
     w: 1,
     s: 'gray',
     r: 'rotate(0, 0, 0)',
@@ -118,7 +118,7 @@ function lineGroup(inputs) {
     // Starting X is left margin plus the vertical spacing
     let x = inputs.lM + inputs.vS;
     // To cover page in diag lines, need to generate lines far past the right margin. Placholder.
-    x <= 2000;
+    x <= 10000;
     // Increment by the spacing between vert lines
     x += inputs.vS
   ) {
@@ -131,7 +131,7 @@ function lineGroup(inputs) {
   for (
     let x = inputs.lM + inputs.pS;
     // Placeholder, will need to cover visible page in lines
-    x <= 2000;
+    x <= 10000;
     x += inputs.pS
   ) {
     const pALine = diagLine(90 - inputs.pA, x, inputs.pC);
