@@ -24,7 +24,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The width of your nib in millimeters"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
@@ -46,7 +46,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The distance between the baseline and the x-height in nib widths"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
@@ -67,7 +67,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The distance between the x-height and the ascender line in nib widths"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
@@ -88,7 +88,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The distance between the baseline and the descender line in nib widths"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
@@ -109,7 +109,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The distance between the baseline and the capital letter line in nib widths"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
@@ -130,7 +130,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The distance between the baseline and the branching-line for Italic, in nib widths"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
@@ -151,7 +151,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The distance between the descender line of one row and the ascender line of the row below it, in nib widths"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
@@ -179,7 +179,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The angle of the vertical strokes of the letters, in degrees"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">degrees</InputAdornment>,
             }}
@@ -199,7 +199,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The distance between the lines showing the angle of vertical strokes, in millimeters"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
@@ -220,7 +220,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The angle of the flat edge of the nib in relation to the horizontal lines, in degrees"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">degrees</InputAdornment>,
             }}
@@ -240,7 +240,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The distance between the lines showing the pen angle strokes, in millimeters"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
@@ -268,7 +268,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The height of your paper, in millimeters"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
@@ -288,7 +288,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The width of your paper, in millimeters"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
@@ -308,7 +308,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The margin between the top edge of your page and the top guideline"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
@@ -328,7 +328,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The margin between the bottom edge of your page and the bottom guideline"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
@@ -348,7 +348,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The margin between the left edge of your page and the guidelines"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
@@ -368,7 +368,7 @@ const Inputs = props => (
             type="number"
             margin="normal"
             helperText="The margin between the right edge of your page and the guidelines"
-            style={{ width: 200 }}
+            style={{ width: 300 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
