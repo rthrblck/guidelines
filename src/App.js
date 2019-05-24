@@ -4,12 +4,7 @@ import './App.css';
 import Inputs from './inputs';
 
 import SVG from './svg';
-import { appStateBlackLetter } from './fixtures';
 import lineGroup from './drawLine';
-
-// This chunk needs to accept state where lineGroup lives, with a fallback default
-const lineArray = lineGroup(appStateBlackLetter);
-const svgBlackLetter = Object.assign({ lineArray }, appStateBlackLetter);
 
 class App extends Component {
   state = {
@@ -17,28 +12,28 @@ class App extends Component {
     // Basic lines
     nW: 3,
     xH: 5,
-    aH: 5,
-    dH: 5,
-    cH: 4,
+    aH: 3,
+    dH: 3,
+    cH: 0,
     bH: 0,
     bC: 'black',
-    iS: 1,
+    iS: 3,
 
     // Verticality and pen angle
-    vA: 90,
+    vA: 0,
     vS: 10,
     vC: 'gray',
-    pA: 0,
+    pA: 45,
     pS: 10,
     pC: 'red',
 
     // Page size and margins
-    pH: 800,
+    pH: 850,
     pW: 1100,
-    tM: 20,
-    bM: 30,
-    lM: 20,
-    rM: 20,
+    tM: 10,
+    bM: 10,
+    lM: 10,
+    rM: 10,
   };
 
   handleChange = (event) => {
@@ -54,17 +49,25 @@ class App extends Component {
           <h1 className="App-title">Calligraphy Guidelines Generator</h1>
         </header>
 
-        <div className="inputs" style={{ float: 'left' }}>
-          <Inputs />
+        <div
+          className="inputs"
+          style={{ float: 'left' }}
+        >
+          <Inputs
+            {...this.state}
+            handleChange={this.handleChange}
+          />
         </div>
 
-      <div>
-
-        <SVG
+        <div
           className="svg"
-          {...svgBlackLetter}
-        />
-      </div>
+          style={{ float: 'left' }}
+        >
+          <SVG
+            {...this.state}
+            lineArray={lineGroup(this.state)}
+          />
+        </div>
 
       </div>
     );
