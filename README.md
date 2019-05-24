@@ -2,17 +2,14 @@
 
 ## Roadmap
 
-- [ ] Build input form
-  - [x] Figure out how to handle state updates from field inputs (start with Storybook using fixtures.js)
-    - [x] Create all input fields with corresponding App level infrastructure
-    - [ ] Define all input field states
-    - [ ] Define all props needed for states
-  - [ ] Create custom input field component, and figure out how to add instance-specific variations (needed?)
-- [x] Build app level component that contains all needed state infrastructure
+- [ ] Inputs
+  - [ ] Fix input div width to eliminate text overlapping
+  - [ ] Set individual input field limiters (min, max, step, etc). Actually, look up what input field properties exist, and see if any of them would be useful
+  - [ ] Custom input field component with individual variations to clean up inputs.js?
 
-- [ ] Build guideline rendering engine
-  - [x] Plumb drawLine.js into svg.js to allow svg to use real inputs and generate real arrays of guidelines
-    - [x] Define 3 state variations for Blackletter, Italic, and Bookhand styles (make them inputs into the svg component)
+- [ ] SVG
+  - [ ] Figure out how to display at a size that is userful to the user, currently too small
+  - [ ] Alter the rendering logic once you figure out how to make it exportable so that the output numbers are correct in real world units
 
 - [ ] Make it exportable
   - [ ] Find tool to export SVG to PDF (must be exported at precise size)
@@ -20,6 +17,7 @@
 
 - [ ] Make it all pretty
   - [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level.
+    - [ ] Move them to tool tips or something like them to have less information always on the page
   - [ ] Use "Butterick's Practical Typography" as a starting point for type decisions.
   - [ ] Make sure contrast and text size are appropriate for all users
 
