@@ -3,16 +3,16 @@
 ## Roadmap
 
 - [ ] Build input form
-  - [ ] Figure out how to handle state updates from field inputs (start with Storybook using fixtures.js)
-    - [ ] Create all input fields with corresponding App level infrastructure
+  - [x] Figure out how to handle state updates from field inputs (start with Storybook using fixtures.js)
+    - [x] Create all input fields with corresponding App level infrastructure
     - [ ] Define all input field states
     - [ ] Define all props needed for states
   - [ ] Create custom input field component, and figure out how to add instance-specific variations (needed?)
-- [ ] Build app level component that contains all needed state infrastructure
+- [x] Build app level component that contains all needed state infrastructure
 
 - [ ] Build guideline rendering engine
-  - [ ] Plumb drawLine.js into svg.js to allow svg to use real inputs and generate real arrays of guidelines
-    - [ ] Define 3 state variations for Blackletter, Italic, and Bookhand styles (make them inputs into the svg component)
+  - [x] Plumb drawLine.js into svg.js to allow svg to use real inputs and generate real arrays of guidelines
+    - [x] Define 3 state variations for Blackletter, Italic, and Bookhand styles (make them inputs into the svg component)
 
 - [ ] Make it exportable
   - [ ] Find tool to export SVG to PDF (must be exported at precise size)
