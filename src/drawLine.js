@@ -1,27 +1,3 @@
-// // Placeholder for React state inputs
-// const state = {
-// // Page dimensions
-//   tM: 10,
-//   bM: 20,
-//   lM: 10,
-//   rM: 10,
-//   pH: 1000,
-//   // Base lines
-//   nW: 3,
-//   aH: 2,
-//   xH: 4,
-//   dH: 2,
-//   iS: 2,
-//   bC: 'black',
-//   // Angled lines
-//   vA: 10,
-//   vS: 30,
-//   vC: 'gray',
-//   pA: 30,
-//   pS: 30,
-//   pC: 'red',
-// };
-
 // Horizontal line drawing function
 function horizLine(currentY, strokeColor) {
 // Define default and input objects
