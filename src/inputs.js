@@ -2,7 +2,6 @@ import React from 'react';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Checkbox from '@material-ui/core/Checkbox';
 
 // TextField imports
 import Typography from '@material-ui/core/Typography';
@@ -220,7 +219,7 @@ const Inputs = props => (
             label="Pen angle"
             type="number"
             margin="normal"
-            helperText="The angle of the flat edge of the nib in relation to the horzizontal lines, in degrees"
+            helperText="The angle of the flat edge of the nib in relation to the horizontal lines, in degrees"
             style={{ width: 200 }}
             InputProps={{
               endAdornment: <InputAdornment position="end">degrees</InputAdornment>,
@@ -249,7 +248,7 @@ const Inputs = props => (
               step: '10',
               min: '10',
             }}
-            value={props.pA}
+            value={props.pS}
             onChange={props.handleChange}
           />
         </div>

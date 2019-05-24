@@ -6,13 +6,17 @@ import Inputs from '../inputs';
 
 class App extends React.Component {
   state = {
+
+    // Basic lines
     nW: 3,
     xH: 5,
     aH: 5,
     dH: 5,
     cH: 4,
     bH: 0,
+    bC: 'black',
     iS: 1,
+
     // Verticality and pen angle
     vA: 90,
     vS: 10,
@@ -20,6 +24,7 @@ class App extends React.Component {
     pA: 0,
     pS: 10,
     pC: 'red',
+
     // Page size and margins
     pH: 800,
     pW: 1100,
