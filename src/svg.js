@@ -21,6 +21,15 @@ const SVG = props => (
         (<line key={`line${index}`} {...line} />))}
     </g>
 
+    <rect
+      x={0}
+      y={0}
+      width={props.pW}
+      height={props.pH}
+      fill="none"
+      stroke="gray"
+    />
+
   </svg>
 );
 
