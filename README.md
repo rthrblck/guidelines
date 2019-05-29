@@ -3,14 +3,14 @@
 ## Roadmap
 
 - [ ] Inputs
-  - [ ] Fix input div width in a better way to eliminate text overlapping
+  - [ ] Fix input div width in a dynamic way to eliminate text overlapping (currently fixed size as placeholder)
   - [ ] Set individual input field limiters (min, max, step, etc). Actually, look up what input field properties exist, and see if any of them would be useful
+  - [ ] Assign proper units all fields, stop using pixels
   - [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
 
 - [ ] SVG
   - [ ] Alter the rendering logic once you figure out how to make it exportable so that the output numbers are correct in real world units
-  - [ ] Add nib width back into the svg calculations
-  - [x] Changing inputs through user fields causes the lines to rerender improperly. Why? Changing angle variables works correctly, but none of the others do.
+  - [X] Add nib width back into the svg calculations
 
 - [ ] Make it exportable
   - [ ] Find tool to export SVG to PDF (must be exported in real world units)

@@ -102,48 +102,6 @@ const Inputs = props => (
         </div>
 
         <div>
-          {/* Capital letter height */}
-          <TextField
-            id="cH"
-            label="Capital letter height"
-            type="number"
-            margin="normal"
-            helperText="The distance between the baseline and the capital letter line in nib widths"
-            style={{ width: 300 }}
-            InputProps={{
-              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
-            }}
-            inputProps={{
-              step: '0.1',
-              min: '0',
-            }}
-            value={props.cH}
-            onChange={props.handleChange}
-          />
-        </div>
-
-        <div>
-          {/* Branching line */}
-          <TextField
-            id="bH"
-            label="Branching-line height"
-            type="number"
-            margin="normal"
-            helperText="The distance between the baseline and the branching-line for Italic, in nib widths"
-            style={{ width: 300 }}
-            InputProps={{
-              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
-            }}
-            inputProps={{
-              step: '0.1',
-              min: '0',
-            }}
-            value={props.bH}
-            onChange={props.handleChange}
-          />
-        </div>
-
-        <div>
           {/* Interlinear spacing */}
           <TextField
             id="iS"

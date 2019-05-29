@@ -67,24 +67,38 @@ function diagLine(angle, currentX, strokeColor) {
 
 // Accpets inputs and produces array of lines.
 function lineGroup(inputs) {
+  const {
+    nW, bC,
+  } = inputs;
+  const xH = inputs.xH * nW;
+  const aH = inputs.aH * nW;
+  const dH = inputs.dH * nW;
+  const iS = inputs.iS * nW;
+  const {
+    vA, vS, vC, pA, pS, pC,
+  } = inputs;
+  const {
+    pH, pW, tM, bM, lM, rM,
+  } = inputs;
+
   // Calculate line spacing period from user inputs in nib widths
-  const lineS = (inputs.aH + inputs.xH + inputs.dH + inputs.iS);
+  const lineS = aH + xH + dH + iS;
   const lineArray = [];
 
   // Generates array of the 4 basic horizontal lines.
   for (
     // The +1 is to address the margin clipping problem
-    let y = inputs.tM + 1;
-    y + inputs.aH + inputs.xH + inputs.dH <= inputs.pH;
+    let y = tM + 1;
+    y + aH + xH + dH <= pH;
     y += lineS
   ) {
-    const aLine = horizLine(y, inputs.bC);
+    const aLine = horizLine(y, bC);
 
-    const xLine = horizLine(y + inputs.aH, inputs.bC);
+    const xLine = horizLine(y + aH, bC);
 
-    const bLine = horizLine(y + inputs.aH + inputs.xH, inputs.bC);
+    const bLine = horizLine(y + aH + xH, bC);
 
-    const dLine = horizLine(y + inputs.aH + inputs.xH + inputs.dH, inputs.bC);
+    const dLine = horizLine(y + aH + xH + dH, bC);
 
     lineArray.push(aLine, xLine, bLine, dLine);
   }
@@ -92,25 +106,25 @@ function lineGroup(inputs) {
   // Generates array of verticality lines
   for (
     // Starting X is left margin plus the vertical spacing
-    let x = inputs.lM + inputs.vS;
+    let x = lM + vS;
     // To cover page in diag lines, need to generate lines far past the right margin. Placholder.
     x <= 10000;
     // Increment by the spacing between vert lines
-    x += inputs.vS
+    x += vS
   ) {
-    const vLine = diagLine(inputs.vA, x, inputs.vC);
+    const vLine = diagLine(vA, x, vC);
 
     lineArray.push(vLine);
   }
 
   // Generates array of pen angle lines
   for (
-    let x = inputs.lM + inputs.pS;
+    let x = lM + pS;
     // Placeholder, will need to cover visible page in lines
     x <= 10000;
-    x += inputs.pS
+    x += pS
   ) {
-    const pALine = diagLine(90 - inputs.pA, x, inputs.pC);
+    const pALine = diagLine(90 - pA, x, pC);
 
     lineArray.push(pALine);
   }

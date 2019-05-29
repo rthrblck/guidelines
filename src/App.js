@@ -14,17 +14,15 @@ class App extends Component {
     xH: 5,
     aH: 3,
     dH: 3,
-    cH: 0,
-    bH: 0,
     bC: 'black',
-    iS: 3,
+    iS: 1,
 
     // Verticality and pen angle
     vA: 0,
-    vS: 10,
+    vS: 50,
     vC: 'gray',
     pA: 45,
-    pS: 10,
+    pS: 50,
     pC: 'red',
 
     // Page size and margins
