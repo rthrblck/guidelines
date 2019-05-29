@@ -10,11 +10,13 @@
 - [ ] SVG
   - [ ] Alter the rendering logic once you figure out how to make it exportable so that the output numbers are correct in real world units
   - [ ] Add nib width back into the svg calculations
-  - [ ] Changing inputs through user fields causes the lines to rerender improperly. Why? Changing angle variables works correctly, but none of the others do.
+  - [x] Changing inputs through user fields causes the lines to rerender improperly. Why? Changing angle variables works correctly, but none of the others do.
 
 - [ ] Make it exportable
-  - [ ] Find tool to export SVG to PDF (must be exported at precise size)
+  - [ ] Find tool to export SVG to PDF (must be exported in real world units)
     - [ ] wkhtmltopdf? Does it allow setting size of SVG in PDF using real world units?
+    - [ ] svg2pdf.js?
+  - [ ] A share button? It could use the settings to create a URL that recreates the settings
 
 - [ ] Make it all pretty
   - [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level.
