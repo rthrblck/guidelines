@@ -65,7 +65,7 @@ function diagLine(angle, currentX, strokeColor) {
   return line;
 }
 
-// Manages user inputs and produces array of lines.
+// Accpets inputs and produces array of lines.
 function lineGroup(inputs) {
   // Calculate line spacing period from user inputs in nib widths
   const lineS = (inputs.aH + inputs.xH + inputs.dH + inputs.iS);
