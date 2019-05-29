@@ -38,7 +38,8 @@ class App extends Component {
 
   handleChange = (event) => {
     const name = event.target.id;
-    this.setState({ [name]: event.target.value });
+    const value = parseFloat(event.target.value);
+    this.setState({ [name]: value });
   };
 
   render() {
