@@ -35,6 +35,12 @@ const SVG = props => (
 
 SVG.propTypes = {
   lineArray: PropTypes.arrayOf(PropTypes.object).isRequired,
+  pW: PropTypes.number.isRequired,
+  pH: PropTypes.number.isRequired,
+  lM: PropTypes.number.isRequired,
+  tM: PropTypes.number.isRequired,
+  rM: PropTypes.number.isRequired,
+  bM: PropTypes.number.isRequired,
 };
 
 export default SVG;

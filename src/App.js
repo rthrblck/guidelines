@@ -28,10 +28,10 @@ class App extends Component {
     // Page size and margins
     pH: 850,
     pW: 1100,
-    tM: 10,
-    bM: 10,
-    lM: 10,
-    rM: 10,
+    tM: 30,
+    bM: 40,
+    lM: 30,
+    rM: 30,
   };
 
   handleChange = (event) => {

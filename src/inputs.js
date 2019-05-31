@@ -1,13 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-// TextField imports
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
-
-// InputAdornment imports
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 const Inputs = props => (
@@ -29,7 +27,7 @@ const Inputs = props => (
               endAdornment: <InputAdornment position="end">mm</InputAdornment>,
             }}
             inputProps={{
-              step: '0.5',
+              step: '0.1',
               min: '0',
             }}
             value={props.nW}
@@ -51,7 +49,7 @@ const Inputs = props => (
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
             inputProps={{
-              step: '0.5',
+              step: '0.25',
               min: '0',
             }}
             value={props.xH}
@@ -72,7 +70,7 @@ const Inputs = props => (
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
             inputProps={{
-              step: '0.5',
+              step: '0.25',
               min: '0',
             }}
             value={props.aH}
@@ -93,7 +91,7 @@ const Inputs = props => (
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
             inputProps={{
-              step: '0.5',
+              step: '0.25',
               min: '0',
             }}
             value={props.dH}
@@ -114,7 +112,7 @@ const Inputs = props => (
               endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
             }}
             inputProps={{
-              step: '0.5',
+              step: '0.25',
               min: '0',
             }}
             value={props.iS}
@@ -343,6 +341,28 @@ const Inputs = props => (
     </Card>
   </div>
 );
+
+Inputs.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  nW: PropTypes.number.isRequired,
+  xH: PropTypes.number.isRequired,
+  aH: PropTypes.number.isRequired,
+  dH: PropTypes.number.isRequired,
+  // bC: PropTypes.string.isRequired,
+  iS: PropTypes.number.isRequired,
+  vA: PropTypes.number.isRequired,
+  vS: PropTypes.number.isRequired,
+  // vC: PropTypes.string.isRequired,
+  pA: PropTypes.number.isRequired,
+  pS: PropTypes.number.isRequired,
+  // pC: PropTypes.string.isRequired,
+  pH: PropTypes.number.isRequired,
+  pW: PropTypes.number.isRequired,
+  tM: PropTypes.number.isRequired,
+  bM: PropTypes.number.isRequired,
+  lM: PropTypes.number.isRequired,
+  rM: PropTypes.number.isRequired,
+};
 
 export default Inputs;
 
