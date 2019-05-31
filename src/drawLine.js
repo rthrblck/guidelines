@@ -78,7 +78,7 @@ function lineGroup(inputs) {
     vA, vS, vC, pA, pS, pC,
   } = inputs;
   const {
-    pH, pW, tM, bM, lM, rM,
+    pH, tM, lM,
   } = inputs;
 
   // Calculate line spacing period from user inputs in nib widths
