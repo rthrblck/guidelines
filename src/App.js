@@ -60,7 +60,6 @@ class App extends Component {
 
         <div
           className="svg"
-          style={{ float: 'left' }}
         >
           <SVG
             {...this.state}

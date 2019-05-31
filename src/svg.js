@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SVG = props => (
-  <svg width={props.pW} height={props.pH}>
+  <svg
+    width={`${props.pW}mm`}
+    height={`${props.pH}mm`}
+    viewBox={`0 0 ${props.pW} ${props.pH}`}
+  >
 
     <defs>
       <clipPath id="margins">

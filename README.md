@@ -4,13 +4,18 @@
 
 - [ ] Inputs
   - [ ] Fix input div width in a dynamic way to eliminate text overlapping (currently fixed size as placeholder)
+  - [ ] Set inputs <div> to scroll independently of svg <div>
   - [ ] Set individual input field limiters (min, max, step, etc). Actually, look up what input field properties exist, and see if any of them would be useful
-  - [ ] Assign proper units all fields, stop using pixels
+  - [X] Add propType validation
   - [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
+  - [ ] Add line color dropdown menu with basic options
 
 - [ ] SVG
-  - [ ] Alter the rendering logic once you figure out how to make it exportable so that the output numbers are correct in real world units
-  - [X] Add nib width back into the svg calculations
+  - [ ] Assign proper units to all fields, stop using pixels
+  - [X] Add propType validation
+  - [X] Set user units as mm
+  - [ ] If exporting svg to pdf requires a different internal structure, fix it
+  - [ ] Set default values for inputs that will break the app if they aren't present
 
 - [ ] Make it exportable
   - [ ] Find tool to export SVG to PDF (must be exported in real world units)
