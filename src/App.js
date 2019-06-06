@@ -26,8 +26,8 @@ class App extends Component {
     pC: 'red',
 
     // Page size and margins
-    pH: 850,
-    pW: 1100,
+    pH: 279.4,
+    pW: 600,
     tM: 30,
     bM: 40,
     lM: 30,
@@ -49,22 +49,27 @@ class App extends Component {
         </header>
 
         <div
-          className="inputs"
-          style={{ float: 'left' }}
+          className="container"
         >
-          <Inputs
-            {...this.state}
-            handleChange={this.handleChange}
-          />
-        </div>
 
-        <div
-          className="svg"
-        >
-          <SVG
-            {...this.state}
-            lineArray={lineGroup(this.state)}
-          />
+          <div
+            className="inputs"
+          >
+            <Inputs
+              {...this.state}
+              handleChange={this.handleChange}
+            />
+          </div>
+
+          <div
+            className="svg"
+          >
+            <SVG
+              {...this.state}
+              lineArray={lineGroup(this.state)}
+            />
+          </div>
+
         </div>
 
       </div>

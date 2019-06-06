@@ -1,10 +1,9 @@
-.App {
-  text-align: center;
+html {
+  max-width: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App {
+  text-align: center;
 }
 
 .App-header {
@@ -20,6 +19,10 @@
 
 .App-intro {
   font-size: large;
+}
+
+.SVG {
+  overflow-x: scroll;
 }
 
 @keyframes App-logo-spin {
