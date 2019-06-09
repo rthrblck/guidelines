@@ -4,9 +4,10 @@ function horizLine(currentY, strokeColor) {
   const defaults = {
     x1: 0,
     y1: 10,
+    // Need to learn a little trig to calculate x2
     x2: 10000,
     y2: 10,
-    w: 1,
+    w: 0.5,
     s: 'black',
   };
   const inputs = {
@@ -39,7 +40,7 @@ function diagLine(angle, currentX, strokeColor) {
     y1: 0,
     x2: 0,
     y2: 10000,
-    w: 1,
+    w: 0.5,
     s: 'gray',
     r: 'rotate(0, 0, 0)',
   };
@@ -65,21 +66,22 @@ function diagLine(angle, currentX, strokeColor) {
   return line;
 }
 
-// Accpets inputs and produces array of lines.
+// Accepts inputs and produces array of lines.
 function lineGroup(inputs) {
-  const {
-    nW, bC,
+  let {
+    xH, aH, dH, iS,
   } = inputs;
-  const xH = inputs.xH * nW;
-  const aH = inputs.aH * nW;
-  const dH = inputs.dH * nW;
-  const iS = inputs.iS * nW;
+
   const {
-    vA, vS, vC, pA, pS, pC,
+    nW, bC, vA, vS, vC, pA, pS, pC, pH, tM, lM,
   } = inputs;
-  const {
-    pH, tM, lM,
-  } = inputs;
+
+  // Sets default value to zero if falsey
+  // Multiplies spacing by nib width
+  xH = (xH || 0) * nW;
+  aH = (aH || 0) * nW;
+  dH = (dH || 0) * nW;
+  iS = (iS || 0) * nW;
 
   // Calculate line spacing period from user inputs in nib widths
   const lineS = aH + xH + dH + iS;
@@ -87,8 +89,8 @@ function lineGroup(inputs) {
 
   // Generates array of the 4 basic horizontal lines.
   for (
-    // The +1 is to address the margin clipping problem
-    let y = tM + 1;
+    // The +0.5 is to address the margin clipping problem
+    let y = tM + 0.5;
     y + aH + xH + dH <= pH;
     y += lineS
   ) {
