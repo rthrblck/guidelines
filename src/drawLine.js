@@ -68,20 +68,16 @@ function diagLine(angle, currentX, strokeColor) {
 
 // Accepts inputs and produces array of lines.
 function lineGroup(inputs) {
-  let {
-    xH, aH, dH, iS,
-  } = inputs;
-
   const {
     nW, bC, vA, vS, vC, pA, pS, pC, pH, tM, lM,
   } = inputs;
 
   // Sets default value to zero if falsey
   // Multiplies spacing by nib width
-  xH = (xH || 0) * nW;
-  aH = (aH || 0) * nW;
-  dH = (dH || 0) * nW;
-  iS = (iS || 0) * nW;
+  const xH = (inputs.xH || 0) * nW;
+  const aH = (inputs.aH || 0) * nW;
+  const dH = (inputs.dH || 0) * nW;
+  const iS = (inputs.iS || 0) * nW;
 
   // Calculate line spacing period from user inputs in nib widths
   const lineS = aH + xH + dH + iS;

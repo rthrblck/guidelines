@@ -4,13 +4,10 @@
 
 Make it work
 - [ ] Inputs
-  - [X] Set inputs <div> to scroll independently of svg <div>
   - [ ] Set individual input field limiters (min, max, step, etc). Actually, look up what input field properties exist, and see if any of them would be useful. Add default values to avoid no lines rendering
 
 - [ ] SVG
-  - [X] Assign proper units to all fields, stop using pixels
   - [ ] If exporting svg to pdf requires a different internal structure, fix it
-  - [X] Set default values for inputs that will break the app if they aren't present
 
 - [ ] Make it exportable
   - [ ] Find tool to export SVG to PDF (must be exported in real world units)
@@ -19,10 +16,10 @@ Make it work
   - [ ] A share button? It could use the settings to create a URL that recreates the settings
 
 Make it right
-- [ ] inputs
+- [ ] Inputs
   - [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
 
-- [ ] svg
+- [ ] SVG
 
 
 Make it all pretty
@@ -33,10 +30,11 @@ Make it all pretty
 - [ ] Make sure contrast and text size are appropriate for all users
 
 Future
-- [ ] inputs
+- [ ] Inputs
   - [ ] Add line color dropdown menu with basic options
 
-- [ ] svg
+- [ ] SVG
+  - [ ] Calculate x value for diagonal lines using trigonometry instead of a placeholder
 
 
 
