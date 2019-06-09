@@ -2,17 +2,15 @@
 
 ## Roadmap
 
+Make it work
 - [ ] Inputs
-  - [X] Fix input div width in a dynamic way to eliminate text overlapping (currently fixed size as placeholder)
-  - [ ] Set inputs <div> to scroll independently of svg <div>
-  - [ ] Set individual input field limiters (min, max, step, etc). Actually, look up what input field properties exist, and see if any of them would be useful
-  - [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
-  - [ ] Add line color dropdown menu with basic options
+  - [X] Set inputs <div> to scroll independently of svg <div>
+  - [ ] Set individual input field limiters (min, max, step, etc). Actually, look up what input field properties exist, and see if any of them would be useful. Add default values to avoid no lines rendering
 
 - [ ] SVG
-  - [ ] Assign proper units to all fields, stop using pixels
+  - [X] Assign proper units to all fields, stop using pixels
   - [ ] If exporting svg to pdf requires a different internal structure, fix it
-  - [ ] Set default values for inputs that will break the app if they aren't present
+  - [X] Set default values for inputs that will break the app if they aren't present
 
 - [ ] Make it exportable
   - [ ] Find tool to export SVG to PDF (must be exported in real world units)
@@ -20,11 +18,28 @@
     - [ ] svg2pdf.js?
   - [ ] A share button? It could use the settings to create a URL that recreates the settings
 
-- [ ] Make it all pretty
-  - [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level.
-    - [ ] Move them to tool tips or something like them to have less information always on the page
-  - [ ] Use "Butterick's Practical Typography" as a starting point for type decisions.
-  - [ ] Make sure contrast and text size are appropriate for all users
+Make it right
+- [ ] inputs
+  - [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
+
+- [ ] svg
+
+
+Make it all pretty
+- [ ] Read MUI styling docs and watch some videos
+- [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level. Perhaps a small graphic would help, too
+  - [ ] Move them to tool tips or something like them to have less information always on the page
+- [ ] Use "Butterick's Practical Typography" as a starting point for type decisions.
+- [ ] Make sure contrast and text size are appropriate for all users
+
+Future
+- [ ] inputs
+  - [ ] Add line color dropdown menu with basic options
+
+- [ ] svg
+
+
+
 
 
 ## Feature Notes
