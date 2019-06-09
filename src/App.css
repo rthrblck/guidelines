@@ -39,7 +39,12 @@ html, body, #root, .App {
   height: calc(100% - 190px);
 }
 
-.inputs, .svg {
+.inputs {
   overflow-y: scroll;
-  width: 50%;
+  width: 20%;
+}
+
+.svg {
+  overflow-y: scroll;
+  width: 80%;
 }

@@ -3,7 +3,7 @@
 ## Roadmap
 
 - [ ] Inputs
-  - [ ] Fix input div width in a dynamic way to eliminate text overlapping (currently fixed size as placeholder)
+  - [X] Fix input div width in a dynamic way to eliminate text overlapping (currently fixed size as placeholder)
   - [ ] Set inputs <div> to scroll independently of svg <div>
   - [ ] Set individual input field limiters (min, max, step, etc). Actually, look up what input field properties exist, and see if any of them would be useful
   - [X] Add propType validation
