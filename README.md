@@ -6,10 +6,9 @@ Make it work
 - [ ] Inputs
 
 - [ ] SVG
-  - [ ] Figure out how to make the horizontal line end condition be if there is enough space before the bottom margin to render a full set of lines
+ - [ ] Set default for margins to 0 if field is blank
 
 - [ ] Make it exportable
-  - [ ] Figure out why it isn't rendering correctly in pdf
 
 Make it right
 - [ ] Inputs
@@ -20,7 +19,6 @@ Make it right
 
 - [ ] Make it exportable
   - [ ] Figure out how to reference the svg node without using findDOMNode(), because that shit is deprecated, and either using refs in a way that that linter likes, or maybe using something else. React hooks? Somehow putting the SVG into state?
-
 
 
 Make it all pretty

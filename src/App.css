@@ -22,10 +22,6 @@ html, body, #root, .App {
   font-size: large;
 }
 
-.svg {
-  overflow-x: scroll;
-}
-
 .container {
   display: flex;
 }
@@ -46,5 +42,6 @@ html, body, #root, .App {
 
 .svg {
   overflow-y: scroll;
+  overflow-x: scroll;
   width: 80%;
 }
