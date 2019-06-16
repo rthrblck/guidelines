@@ -85,8 +85,8 @@ function lineGroup(inputs) {
 
   // Generates array of the 4 basic horizontal lines.
   for (
-    // The +0.5 is to address the margin clipping problem
-    let y = tM + 0.5;
+    // The +0.25 is to address the margin clipping problem
+    let y = tM + 0.25;
     y + aH + xH + dH <= pH;
     y += lineS
   ) {

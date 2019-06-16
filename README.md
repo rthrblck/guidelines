@@ -4,16 +4,13 @@
 
 Make it work
 - [ ] Inputs
-  - [ ] Set individual input field limiters (min, max, step, etc). Actually, look up what input field properties exist, and see if any of them would be useful. Add default values to avoid no lines rendering
 
 - [ ] SVG
-  - [ ] If exporting svg to pdf requires a different internal structure, fix it
+  - [ ] Is there clipping happening on the bottom of the SVG because of bumping it down a fraction of a pixel to avoid clipping at the top?
 
 - [ ] Make it exportable
-  - [ ] Find tool to export SVG to PDF (must be exported in real world units)
-    - [ ] wkhtmltopdf? Does it allow setting size of SVG in PDF using real world units?
-    - [ ] svg2pdf.js?
-  - [ ] A share button? It could use the settings to create a URL that recreates the settings
+  - [X] Implement svg2pdf.js, trigger it with a button
+  - [ ] Figure out why it isn't rendering correctly in pdf
 
 Make it right
 - [ ] Inputs
@@ -28,6 +25,7 @@ Make it all pretty
   - [ ] Move them to tool tips or something like them to have less information always on the page
 - [ ] Use "Butterick's Practical Typography" as a starting point for type decisions.
 - [ ] Make sure contrast and text size are appropriate for all users
+- [ ] Print line of text on page that lists all of the input variables
 
 Future
 - [ ] Inputs
@@ -35,6 +33,10 @@ Future
 
 - [ ] SVG
   - [ ] Calculate x value for diagonal lines using trigonometry instead of a placeholder
+
+- [ ] Design
+  - [ ] A share button? It could use the settings to create a URL that recreates the settings
+  - [ ] Display SVG as a two views, one a closeup of a single set of guidelines, the other a full page view that shows page dimensions, margins, and lines
 
 
 
