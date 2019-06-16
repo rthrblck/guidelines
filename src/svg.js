@@ -14,9 +14,9 @@ class SVG extends React.Component {
           <clipPath id="margins">
             <rect
               x={this.props.lM}
-              y={this.props.tM}
+              y={this.props.tM - 0.25}
               width={this.props.pW - (this.props.lM + this.props.rM)}
-              height={this.props.pH - (this.props.tM + this.props.bM)}
+              height={(this.props.pH + 0.25) - (this.props.tM + this.props.bM)}
             />
           </clipPath>
         </defs>

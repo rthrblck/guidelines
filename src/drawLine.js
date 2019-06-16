@@ -37,7 +37,7 @@ function diagLine(angle, currentX, strokeColor) {
   // Define default and input objects
   const defaults = {
     x1: 0,
-    y1: 0,
+    y1: -10000,
     x2: 0,
     y2: 10000,
     w: 0.5,
@@ -69,7 +69,7 @@ function diagLine(angle, currentX, strokeColor) {
 // Accepts inputs and produces array of lines.
 function lineGroup(inputs) {
   const {
-    nW, bC, vA, vS, vC, pA, pS, pC, pH, tM, lM,
+    nW, bC, vA, vS, vC, pA, pS, pC, pH, tM, bM, lM,
   } = inputs;
 
   // Sets default value to zero if falsey
@@ -79,15 +79,14 @@ function lineGroup(inputs) {
   const dH = (inputs.dH || 0) * nW;
   const iS = (inputs.iS || 0) * nW;
 
-  // Calculate line spacing period from user inputs in nib widths
+  // Calculate line spacing period in nib widths
   const lineS = aH + xH + dH + iS;
   const lineArray = [];
 
   // Generates array of the 4 basic horizontal lines.
   for (
-    // The +0.25 is to address the margin clipping problem
-    let y = tM + 0.25;
-    y + aH + xH + dH <= pH;
+    let y = tM;
+    y + aH + xH + dH <= pH - bM;
     y += lineS
   ) {
     const aLine = horizLine(y, bC);
@@ -122,7 +121,7 @@ function lineGroup(inputs) {
     x <= 10000;
     x += pS
   ) {
-    const pALine = diagLine(90 - pA, x, pC);
+    const pALine = diagLine((90 - pA), x, pC);
 
     lineArray.push(pALine);
   }

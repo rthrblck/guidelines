@@ -6,10 +6,9 @@ Make it work
 - [ ] Inputs
 
 - [ ] SVG
-  - [ ] Is there clipping happening on the bottom of the SVG because of bumping it down a fraction of a pixel to avoid clipping at the top?
+  - [ ] Figure out how to make the horizontal line end condition be if there is enough space before the bottom margin to render a full set of lines
 
 - [ ] Make it exportable
-  - [X] Implement svg2pdf.js, trigger it with a button
   - [ ] Figure out why it isn't rendering correctly in pdf
 
 Make it right
@@ -17,6 +16,11 @@ Make it right
   - [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
 
 - [ ] SVG
+ - [ ]
+
+- [ ] Make it exportable
+  - [ ] Figure out how to reference the svg node without using findDOMNode(), because that shit is deprecated, and either using refs in a way that that linter likes, or maybe using something else. React hooks? Somehow putting the SVG into state?
+
 
 
 Make it all pretty

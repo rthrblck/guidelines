@@ -25,7 +25,7 @@ class App extends Component {
 
     // Verticality and pen angle
     vA: 0,
-    vS: 50,
+    vS: 30,
     vC: 'gray',
     pA: 45,
     pS: 50,
@@ -35,7 +35,7 @@ class App extends Component {
     pH: 279.4,
     pW: 215.9,
     tM: 30,
-    bM: 40,
+    bM: 35,
     lM: 30,
     rM: 30,
   };
@@ -51,7 +51,7 @@ class App extends Component {
   download = () => {
     const svgElement = ReactDOM.findDOMNode(this.svgRef.current);
     // const svgElement = this.svgRef.current;
-    const pdf = new JSPDF('l', 'mm', [this.state.pW, this.state.pH]);
+    const pdf = new JSPDF('p', 'mm', [this.state.pW, this.state.pH]);
     svg2pdf(svgElement, pdf, {
       xOffset: 0,
       yOffset: 0,
