@@ -1,2 +1,2 @@
-import './Drawer.story';
+import './inputs.story';
 import './svg.story';

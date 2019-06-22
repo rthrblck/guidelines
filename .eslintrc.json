@@ -1,6 +1,9 @@
 {
     "parser": "babel-eslint",
     "extends": "airbnb",
+    "plugins": ["jest"],
+    "env": {
+      "jest/globals": true },
     "rules": {
       "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.story.js"]}],
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
