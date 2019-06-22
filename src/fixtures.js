@@ -1,49 +1,90 @@
-const svgPropsBlackLetter = {
-  lineArray: [
-    {
-      x1: '0',
-      y1: '10',
-      x2: '1000',
-      y2: '10',
-      strokeWidth: '1',
-      stroke: 'black',
-    },
-    {
-      x1: '0',
-      y1: '30',
-      x2: '1000',
-      y2: '30',
-      strokeWidth: '1',
-      stroke: 'black',
-    },
-    {
-      x1: '0',
-      y1: '70',
-      x2: '1000',
-      y2: '70',
-      strokeWidth: '1',
-      stroke: 'black',
-    },
-    {
-      x1: '0',
-      y1: '90',
-      x2: '1000',
-      y2: '90',
-      strokeWidth: '1',
-      stroke: 'black',
-    },
-  ],
+// To Do: Look up letter proportions of these styles to make sure they're accurate
 
-  pageSettings: {
-    pW: 600,
-    pH: 800,
-    lM: 10,
-    rM: 10,
-    tM: 10,
-    bM: 10,
-  },
+const appStateBlackLetter = {
+
+// Basic lines
+  nW: 3,
+  xH: 5,
+  aH: 3,
+  dH: 3,
+  cH: 0,
+  bH: 0,
+  bC: 'black',
+  iS: 3,
+
+  // Angled lines
+  vA: 0,
+  vS: 10,
+  vC: 'gray',
+  pA: 45,
+  pS: 10,
+  pC: 'red',
+
+  // Page settings
+  pH: 400,
+  pW: 600,
+  tM: 10,
+  bM: 10,
+  lM: 10,
+  rM: 10,
 };
 
-const appStateBlackLetter = {};
+const appStateBookhand = {
 
-export { svgPropsBlackLetter, appStateBlackLetter };
+// Basic lines
+  nW: 3,
+  xH: 4,
+  aH: 3,
+  dH: 3,
+  cH: 0,
+  bH: 0,
+  bC: 'black',
+  iS: 3,
+
+  // Angled lines
+  vA: 0,
+  vS: 10,
+  vC: 'gray',
+  pA: 45,
+  pS: 10,
+  pC: 'green',
+
+  // Page settings
+  pH: 400,
+  pW: 600,
+  tM: 10,
+  bM: 10,
+  lM: 10,
+  rM: 10,
+};
+
+const appStateItalic = {
+
+// Basic lines
+  nW: 3,
+  xH: 5,
+  aH: 4,
+  dH: 4,
+  cH: 0,
+  bH: 0,
+  bC: 'black',
+  iS: 3,
+
+  // Angled lines
+  vA: 0,
+  vS: 10,
+  vC: 'gray',
+  pA: 45,
+  pS: 10,
+  pC: 'red',
+
+  // Page settings
+  pH: 400,
+  pW: 600,
+  tM: 10,
+  bM: 10,
+  lM: 10,
+  rM: 10,
+};
+
+export { appStateBlackLetter, appStateBookhand, appStateItalic };

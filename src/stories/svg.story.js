@@ -3,16 +3,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import SVG from '../svg';
-import { svgPropsBlackLetter } from '../fixtures';
+import { appStateBlackLetter } from '../fixtures';
+import lineGroup from '../drawLine';
+
+const lineArray = lineGroup(appStateBlackLetter);
+const svgBlackLetter = Object.assign({ lineArray }, appStateBlackLetter);
 
 storiesOf('svg', module)
-  .add('BlackLetter explicit', () => (
-    <SVG {...svgPropsBlackLetter} />
+  .add('BlackLetter', () => (
+    <SVG
+      {...svgBlackLetter}
+    />
   ));
-// .add('BlackLetter as blue', () => {
-//   const blues = Object.assign({}, svgPropsBlackLetter);
-//   for (let i = 0; i < blues.lineArray.length; i += 1) {
-//     blues.lineArray[i].stroke = 'blue';
-//   }
-//   return (<SVG {...blues} />);
-// });
