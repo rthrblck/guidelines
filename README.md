@@ -26,6 +26,7 @@
 - [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
 - [ ] Change "verticality" to slope
 - [ ] Figure out how to switch between Metric and US Customary units
+- [ ] Figure out initial decimal issues, probably involves string to numeral conversion
 
 ### SVG
 - [ ] Diagonal lines are not rendering properly, investigate and maybe open a git issue
