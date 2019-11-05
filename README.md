@@ -1,99 +1,96 @@
-# Calligraphy Guidelines Generator
+# Calligraphy Guidelines Generator Roadmap
 
-## Roadmap
+## Make it work
 
-Make it work
-- [ ] Inputs
+### Inputs
 
-- [ ] SVG
- - [ ] Set default for margins to 0 if field is blank
+### SVG
+- [ ] Set default for margins to 0 if field is blank
 
-- [ ] Make it exportable
+### Export/Print
 
-Make it right
-- [ ] Inputs
-  - [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
+### Donate
+- [ ] Figure out how to hook up PayPal to a donate button
+- [ ] User engagement
+  - [ ] Create About/Donation page
+    - [ ] mynoise.net for donation page example language and flow
+  - [ ] Create list of possible Educational things to include
+    - [ ] Links, book list,
 
-- [ ] SVG
- - [ ]
+### Bugs
+- [ ] Nib width field crashes up, other fields probably do, too
 
-- [ ] Make it exportable
-  - [ ] Figure out how to reference the svg node without using findDOMNode(), because that shit is deprecated, and either using refs in a way that that linter likes, or maybe using something else. React hooks? Somehow putting the SVG into state?
+## Make it right
 
+### Inputs
+- [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
+- [ ] Change "verticality" to slope
+- [ ] Figure out how to switch between Metric and US Customary units
+- [ ] Figure out initial decimal issues, probably involves string to numeral conversion
 
-Make it all pretty
+### SVG
+- [ ] Diagonal lines are not rendering properly, investigate and maybe open a git issue
+- [ ] Set degree field maximums and minimums
+- [ ] Add some sort of marker to indicate x-height, like X or nib ladder
+- [ ] Use smaller default margins
+- [ ] Make sure default line colors work in black and white
+
+### Export/Print
+- [ ] Figure out how to reference the svg node without using findDOMNode(), because that shit is deprecated, and either using refs in a way that that linter likes, or maybe using something else. React hooks? Somehow putting the SVG into state?
+
+## Make it all pretty
 - [ ] Read MUI styling docs and watch some videos
-- [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level. Perhaps a small graphic would help, too
-  - [ ] Move them to tool tips or something like them to have less information always on the page
+- [ ] Read accessibility standards
+
+### Page layout
+  - [ ] Add Title field at top, for use later as downloaded file name, and indicate what makes a good file name with example language
+  
+### Typography
 - [ ] Use "Butterick's Practical Typography" as a starting point for type decisions.
 - [ ] Make sure contrast and text size are appropriate for all users
 - [ ] Print line of text on page that lists all of the input variables
 
-Future
-- [ ] Inputs
-  - [ ] Add line color dropdown menu with basic options
+### Inputs
+- [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level. Perhaps a small graphic would help, too
+  - [ ] Move them to tool tips or something like that to have less information always on the page
+- [ ] Make blank text area smaller, appropriate to amount of text in each, increase size of incremental arrows, and make sure the units are prominently displayed
+- [ ] Make scroll indicator always on
+- [ ] Change order of margin inputs to L, R, T, B
+- [ ] Show all decimal units for each field at all times (like "3.00" instead of "3")
 
-- [ ] SVG
-  - [ ] Calculate x value for diagonal lines using trigonometry instead of a placeholder
+### SVG
+- [ ] Add Hide Line option for all lines
 
+### Export/Print
+- [ ] Add option to print on page for letter proportions and nib measurements/page and margin proportions
+- [ ] Write and include Download and Print instructions
+
+## Future
+
+### Inputs
+- [ ] Add line color dropdown menu with basic options (like calligraphypaper.appspot.com)
+- [ ] Add option for dotted lines
+
+### SVG
+- [ ] Calculate x value for diagonal lines using trigonometry instead of a placeholder
+- [ ] Shade interlinear space, perhaps a grey? Or perhaps just blank out all slope lines from the iS areas
+- [ ] Remove all slope lines from bottom margin
+- [ ] Highlight what lines are changing on screen when a field is selected?
 - [ ] Design
   - [ ] A share button? It could use the settings to create a URL that recreates the settings
   - [ ] Display SVG as a two views, one a closeup of a single set of guidelines, the other a full page view that shows page dimensions, margins, and lines
-
-
-
-
-
-## Feature Notes
-
-### Inputs based on nib width:
-* Blank entries/0 will be omitted from guidelines. Maybe include toggle switches to turn individual guidelines on/off
-1. Nib width:
-  * Not sure if this should be a list of manufacturers/models, or just ask for width in mm. Perhaps a toggle between the two.
-    * If it's manufacturers/models, that should be two dropdown lists
-    * If it's nib width in millimeters, make the step 0.1mm increments
-  * Presets for common styles (dropdown menu listing Italic, Bookhand, Blackletter, etc), but all measurements are text fields and can be modified (see nib width note).
-  * Baseline: this line is generated based on other user input (ascender height, x-height) but is not directly user defined.
-2. X-height
-3. Ascender height
-4. Descender height
-5. Caps height
-6. (maybe) Branching line for italic
-7. Interlinear spacing (distance from the descender height of a line to the ascender height of the line below it)
-
-// TODO: Ask Cora if it's more useful to use "nib widths" as the unit for 3-7, or to set them as measurements directly using "mm". This seems like an especially good question for 7.
-
-### Vertical of letters
-* Note that for angle of vertical for letters x-axis is 90 degrees, y-axis is 0 degrees, and angle of vertical is given as degrees off of y-axis, different from pen angle, below. (Good opportunity for a visual reference next to input field).
-* Need to find out if verticals can be negative (negative slope from left to right).
-1. Slant of vertical: 90 to 0 degrees, I think.
-2. Distance between vertical lines: default measurements that can be changed, same "x.x mm" as above
-
-// TODO: As Cora what the range of possible angles is.
-
-### Pen angle
-* Note that for pen angle x-axis is 0 degrees, y-axis is 90 degrees, and pen is given as degrees off of x-axis, different from vertical of letter, above. (Good opportunity for a visual reference next to input field).
-* Need to find out if pen angle can be negative (negative slop from left to right).
-1. Pen angle
-2. Distance between pen angle lines: default measurements that can be changed, same "x.x mm" as above
-
-// TODO: Ask Cora what the range of possible angles is.
-
-### Guideline indicators
-1. "X" marker in left margin between base-line and x-height line: toggle on/off
-2. Nib marks (block ladder) in left margin: toggle on/off
-
-### Paper options
-1. Paper size: selectable list that shows h/w, but can be customized, "x.x mm X x.x mm" but will also need "x.x in X x.x in", and both fields should auto update if the other is changed.
-2. Paper orientation: radio buttons, default is landscape
-3. Page margins on all 4 sides, mm and inches.
-
-### Line appearance
-* give options to change line thickness and color for each line separately, perhaps a color picker?
-* default colors are black for all horizontals and vertical indicators, red for pen angle
-1. Page title
-2. User entered name/label for guidelines
-3. Most important measurements and settings will automatically print along bottom margin in small text. Can be toggled on/off.
-
-### Future
-1. Toggle to switch between broad edge pen and pointed pen. Pointed pen has distinct parameters that will need to be defined, which can be a separate phase of development.
+  - [ ] Add default style selector (Italic, Blackletter, Uncial, etc)
+  - [ ] Add nib size selector (see nib size chart that Cora sent you)
+  - [ ] Add option to increase/reduce line thickness for very large or small guidelines, or for specialty paper
+  - [ ] Change how slope lines are spaced. Potentially, instead of a distance between lines, use a slider to to add or reduce lines on the page
+  
+### Affordances
+- [ ] Add About page
+  - [ ] How to use this tool tutorial, with automatic walk through on first page visit
+- [ ] Get listed on calligraphies.com
+  - [ ] Email list? For updates, new feature announcements, donation solicitation, etc?
+    - [ ] Survey Monkey: short <10 question survey with specific questions (what instrument do you play?) about themselves, and open-ended, emotionally focused questions to get copy for content in site and donation emails
+ 
+### New functions
+- [ ] Circular guideline arrangements
+- [ ] Pointed pen guidelines (no nib widths or pen angles)
