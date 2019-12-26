@@ -1,6 +1,7 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
+import PropTypes from 'prop-types';
 
+import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
@@ -17,7 +18,7 @@ CustomInput(props) {
     size: '10rem',
   };
   const InputProps = {
-    endAdornment: <InputAdornment position="end">{props.inputAdornment}</InputAdornment>
+    endAdornment: <InputAdornment position="end">{props.inputAdornment}</InputAdornment>,
   };
   return (
     <div>
@@ -35,16 +36,18 @@ CustomInput(props) {
         style={{ width: inputProps.size }}
       />
 
-      <IconButton aria-label="subtractStep">
+      <IconButton aria-label="subtractStep" style={{ display: 'inline' }}>
         <RemoveIcon
           onClick={
-          () => props.subtractButtonClick(props.id, props.step)}/>
+          () => props.subtractButtonClick(props.id, props.step)}
+        />
       </IconButton>
 
       <IconButton aria-label="addStep">
         <AddIcon
           onClick={
-          () => props.addButtonClick(props.id, props.step)}/>
+          () => props.addButtonClick(props.id, props.step)}
+        />
       </IconButton>
 
       <Tooltip title={
@@ -61,5 +64,17 @@ CustomInput(props) {
     </div>
   );
 }
+
+CustomInput.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  subtractButtonClick: PropTypes.func.isRequired,
+  addButtonClick: PropTypes.func.isRequired,
+  step: PropTypes.number.isRequired,
+  inputAdornment: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  min: PropTypes.number.isRequired,
+};
 
 export default CustomInput;

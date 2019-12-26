@@ -2,10 +2,8 @@ import React from 'react';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
-import InputAdornment from '@material-ui/core/InputAdornment';
-
 import { storiesOf } from '@storybook/react';
-import CustomInput from '../incrementButtons';
+import CustomInput from '../CustomInput';
 
 const theme = createMuiTheme({
   typography: {
