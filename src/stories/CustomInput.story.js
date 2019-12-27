@@ -14,7 +14,7 @@ const theme = createMuiTheme({
 class ButtonContainer extends React.Component {
   state = {
     // Basic lines
-    nW: 3,
+    nW: 1,
     xH: 5,
     aH: 5,
     dH: 5,
@@ -50,15 +50,16 @@ class ButtonContainer extends React.Component {
     this.setState(state => ({ [id]: parseFloat((state[id] + step).toFixed(2)) }));
   }
 
-  subtractButtonClick = (id, step) => {
-    this.setState(state => ({ [id]: parseFloat((state[id] - step).toFixed(2)) }));
+  subtractButtonClick = (id, step, min) => {
+    const newValue = (parseFloat((this.state[id] - step).toFixed(2)));
+    const validateValue = Math.max(newValue, min);
+    this.setState({ [id]: validateValue });
   }
 
   render() {
     return (
       <MuiThemeProvider theme={theme}>
         <CustomInput
-          {...this.state}
           onChange={this.onChange}
           addButtonClick={this.addButtonClick}
           subtractButtonClick={this.subtractButtonClick}
@@ -79,6 +80,4 @@ storiesOf('CustomInput', module).add('initial', () => (
   <ButtonContainer />
 ));
 
-// Rebuild TextField with underlying components?
-// Buttons that update state by the step
-// Proper state updates (clone state, update change, return new state)
+// Alter button click updates to make sure the value doesn't go below the minimum

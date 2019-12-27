@@ -14,12 +14,14 @@ function
 CustomInput(props) {
   const inputProps = {
     step: props.step,
-    min: '0',
+    min: props.min,
     size: '10rem',
   };
+
   const InputProps = {
     endAdornment: <InputAdornment position="end">{props.inputAdornment}</InputAdornment>,
   };
+
   return (
     <div>
       <TextField
@@ -28,7 +30,6 @@ CustomInput(props) {
         type="number"
 
         value={props.value}
-        min={props.min}
         onChange={props.onChange}
 
         inputProps={inputProps}
@@ -39,7 +40,7 @@ CustomInput(props) {
       <IconButton aria-label="subtractStep" style={{ display: 'inline' }}>
         <RemoveIcon
           onClick={
-          () => props.subtractButtonClick(props.id, props.step)}
+          () => props.subtractButtonClick(props.id, props.step, props.min)}
         />
       </IconButton>
 
