@@ -18,18 +18,19 @@
     - [ ] Links, book list,
 
 ### Bugs
-- [ ] Nib width field crashes up, other fields probably do, too
+- [ ] Nib width field crashes app, other fields probably do, too
 
 ## Make it right
 
 ### Inputs
-- [ ] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
+- [x] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
 - [ ] Change "verticality" to slope
 - [ ] Figure out how to switch between Metric and US Customary units
 - [ ] Figure out initial decimal issues, probably involves string to numeral conversion
 
 ### SVG
 - [ ] Diagonal lines are not rendering properly, investigate and maybe open a git issue
+- [ ] Diagonal line spacing: give density options for lines on page (maybe: *none*, *a few*, *some*, *more*, and *a lot*) and base those options on multiples of the nib width.
 - [ ] Set degree field maximums and minimums
 - [ ] Add some sort of marker to indicate x-height, like X or nib ladder
 - [ ] Use smaller default margins
@@ -44,7 +45,7 @@
 
 ### Page layout
   - [ ] Add Title field at top, for use later as downloaded file name, and indicate what makes a good file name with example language
-  
+
 ### Typography
 - [ ] Use "Butterick's Practical Typography" as a starting point for type decisions.
 - [ ] Make sure contrast and text size are appropriate for all users
@@ -83,14 +84,14 @@
   - [ ] Add nib size selector (see nib size chart that Cora sent you)
   - [ ] Add option to increase/reduce line thickness for very large or small guidelines, or for specialty paper
   - [ ] Change how slope lines are spaced. Potentially, instead of a distance between lines, use a slider to to add or reduce lines on the page
-  
+
 ### Affordances
 - [ ] Add About page
   - [ ] How to use this tool tutorial, with automatic walk through on first page visit
 - [ ] Get listed on calligraphies.com
   - [ ] Email list? For updates, new feature announcements, donation solicitation, etc?
     - [ ] Survey Monkey: short <10 question survey with specific questions (what instrument do you play?) about themselves, and open-ended, emotionally focused questions to get copy for content in site and donation emails
- 
+
 ### New functions
 - [ ] Circular guideline arrangements
 - [ ] Pointed pen guidelines (no nib widths or pen angles)
