@@ -42,7 +42,7 @@ CustomInput(props) {
         id={props.id}
         label={props.label}
         type="number"
-
+        margin="normal"
         value={props.value}
         onChange={props.onChange}
 
