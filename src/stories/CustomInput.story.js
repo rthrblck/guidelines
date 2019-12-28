@@ -69,6 +69,7 @@ class ButtonContainer extends React.Component {
           step={0.1}
           label="Nib width"
           inputAdornment="mm"
+          helpText="The width of your broad-edged nib"
         />
 
       </MuiThemeProvider>

@@ -24,7 +24,7 @@
 
 ### Inputs
 - [x] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
-- [ ] Change "verticality" to slope
+- [ ] Change "verticality" to slope (need to rename the two verticality variables in all of the files as well)
 - [ ] Figure out how to switch between Metric and US Customary units
 - [ ] Figure out initial decimal issues, probably involves string to numeral conversion
 
@@ -52,8 +52,9 @@
 - [ ] Print line of text on page that lists all of the input variables
 
 ### Inputs
-- [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level. Perhaps a small graphic would help, too
+- [ ] Write user-facing explanations of each input variable using plain English and simple, specific illustrations to make clear what each input defines for users of any knowledge level.
   - [ ] Move them to tool tips or something like that to have less information always on the page
+  - [ ] Figure out how to put images into tooltips
 - [ ] Make blank text area smaller, appropriate to amount of text in each, increase size of incremental arrows, and make sure the units are prominently displayed
 - [ ] Make scroll indicator always on
 - [ ] Change order of margin inputs to L, R, T, B
@@ -75,7 +76,7 @@
 ### SVG
 - [ ] Calculate x value for diagonal lines using trigonometry instead of a placeholder
 - [ ] Shade interlinear space, perhaps a grey? Or perhaps just blank out all slope lines from the iS areas
-- [ ] Remove all slope lines from bottom margin
+- [ ] Eliminate extra diagonal lines that show at the bottom of the stack when there isn't enough room to render a new set of horizontal guidelines. Maybe just set the bottom margin to the position of the last horizontal line that's rendered?
 - [ ] Highlight what lines are changing on screen when a field is selected?
 - [ ] Design
   - [ ] A share button? It could use the settings to create a URL that recreates the settings
@@ -83,7 +84,6 @@
   - [ ] Add default style selector (Italic, Blackletter, Uncial, etc)
   - [ ] Add nib size selector (see nib size chart that Cora sent you)
   - [ ] Add option to increase/reduce line thickness for very large or small guidelines, or for specialty paper
-  - [ ] Change how slope lines are spaced. Potentially, instead of a distance between lines, use a slider to to add or reduce lines on the page
 
 ### Affordances
 - [ ] Add About page

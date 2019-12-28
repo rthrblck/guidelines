@@ -24,19 +24,6 @@ CustomInput(props) {
 
   return (
     <div>
-      <TextField
-        id={props.id}
-        label={props.label}
-        type="number"
-
-        value={props.value}
-        onChange={props.onChange}
-
-        inputProps={inputProps}
-        InputProps={InputProps}
-        style={{ width: inputProps.size }}
-      />
-
       <IconButton aria-label="subtractStep" style={{ display: 'inline' }}>
         <RemoveIcon
           onClick={
@@ -51,9 +38,22 @@ CustomInput(props) {
         />
       </IconButton>
 
+      <TextField
+        id={props.id}
+        label={props.label}
+        type="number"
+
+        value={props.value}
+        onChange={props.onChange}
+
+        inputProps={inputProps}
+        InputProps={InputProps}
+        style={{ width: inputProps.size }}
+      />
+
       <Tooltip title={
         <React.Fragment>
-          <Typography color="inherit">The width of your broad-edged nib</Typography>
+          <Typography color="inherit">{props.helpText}</Typography>
         </React.Fragment>
       }
       >
@@ -76,6 +76,7 @@ CustomInput.propTypes = {
   label: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
   min: PropTypes.number.isRequired,
+  helpText: PropTypes.string.isRequired,
 };
 
 export default CustomInput;
