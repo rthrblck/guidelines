@@ -24,19 +24,6 @@ CustomInput(props) {
 
   return (
     <div>
-      <IconButton aria-label="subtractStep" style={{ display: 'inline' }}>
-        <RemoveIcon
-          onClick={
-          () => props.subtractButtonClick(props.id, props.step, props.min)}
-        />
-      </IconButton>
-
-      <IconButton aria-label="addStep">
-        <AddIcon
-          onClick={
-          () => props.addButtonClick(props.id, props.step)}
-        />
-      </IconButton>
 
       <TextField
         id={props.id}
@@ -50,6 +37,20 @@ CustomInput(props) {
         InputProps={InputProps}
         style={{ width: inputProps.size }}
       />
+
+      <IconButton aria-label="subtractStep" style={{ display: 'inline' }}>
+        <RemoveIcon
+          onClick={
+          () => props.subtractButtonClick(props.id, props.step, props.min)}
+        />
+      </IconButton>
+
+      <IconButton aria-label="addStep">
+        <AddIcon
+          onClick={
+          () => props.addButtonClick(props.id, props.step)}
+        />
+      </IconButton>
 
       <Tooltip title={
         <React.Fragment>

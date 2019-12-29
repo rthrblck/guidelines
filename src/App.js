@@ -28,8 +28,8 @@ class App extends Component {
       iS: 1,
 
       // Verticality and pen angle
-      vA: 0,
-      vS: 30,
+      sA: 0,
+      sS: 30,
       vC: 'gray',
       pA: 45,
       pS: 30,

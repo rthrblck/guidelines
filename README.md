@@ -5,7 +5,7 @@
 ### Inputs
 
 ### SVG
-- [ ] Set default for margins to 0 if field is blank
+- [ ] Set default for margins (and all inputs, really) to 0 if field is blank
 
 ### Export/Print
 
@@ -18,15 +18,16 @@
     - [ ] Links, book list,
 
 ### Bugs
-- [ ] Nib width field crashes app, other fields probably do, too
+- [ ] Nib width field crashes app, other fields probably do, too (might be solved by a blank input defaulting to 0)
+- [ ] Figure out initial decimal issues, probably involves string to numeral conversion
+
+
 
 ## Make it right
 
 ### Inputs
-- [x] Write custom input field component with individual variations to clean up inputs.js? Seems like a good idea
 - [ ] Change "verticality" to slope (need to rename the two verticality variables in all of the files as well)
 - [ ] Figure out how to switch between Metric and US Customary units
-- [ ] Figure out initial decimal issues, probably involves string to numeral conversion
 
 ### SVG
 - [ ] Diagonal lines are not rendering properly, investigate and maybe open a git issue
@@ -38,6 +39,8 @@
 
 ### Export/Print
 - [ ] Figure out how to reference the svg node without using findDOMNode(), because that shit is deprecated, and either using refs in a way that that linter likes, or maybe using something else. React hooks? Somehow putting the SVG into state?
+
+
 
 ## Make it all pretty
 - [ ] Read MUI styling docs and watch some videos
