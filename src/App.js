@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+
 import Button from '@material-ui/core/Button';
 
 import JSPDF from 'jspdf-yworks';
@@ -12,6 +14,12 @@ import Inputs from './Inputs';
 
 import SVG from './svg';
 import lineGroup from './drawLine';
+
+const theme = createMuiTheme({
+  typography: {
+    fontSize: 20,
+  },
+});
 
 class App extends Component {
   constructor() {
@@ -79,39 +87,42 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <MuiThemeProvider theme={theme}>
+        <div className="App">
 
-        <header className="App-header">
-          <h1 className="App-title">Calligraphy Guidelines Generator</h1>
-        </header>
+          <header className="App-header">
+            <h1 className="App-title">Calligraphy Guidelines Generator</h1>
+          </header>
 
-        <div
-          className="container"
-        >
-
-          <Inputs
-            {...this.state}
-            handleChange={this.handleChange}
-            addButtonClick={this.addButtonClick}
-            subtractButtonClick={this.subtractButtonClick}
-          />
-
-          <SVG
-            ref={this.svgRef}
-            {...this.state}
-            lineArray={lineGroup(this.state)}
-          />
-
-          <Button
-            variant="contained"
-            onClick={this.download}
+          <div
+            className="container"
           >
-          Download
-          </Button>
+
+            <Inputs
+              {...this.state}
+              handleChange={this.handleChange}
+              addButtonClick={this.addButtonClick}
+              subtractButtonClick={this.subtractButtonClick}
+            />
+
+            <SVG
+              ref={this.svgRef}
+              {...this.state}
+              lineArray={lineGroup(this.state)}
+            />
+
+            <Button
+              variant="contained"
+              onClick={this.download}
+            >
+            Download
+            </Button>
+
+          </div>
 
         </div>
+      </MuiThemeProvider>
 
-      </div>
     );
   }
 }
