@@ -15,6 +15,7 @@ CustomInput(props) {
   const inputProps = {
     step: props.step,
     min: props.min,
+    max: props.max,
     size: '10rem',
   };
 
@@ -41,14 +42,14 @@ CustomInput(props) {
       <IconButton aria-label="subtractStep" style={{ display: 'inline' }}>
         <RemoveIcon
           onClick={
-          () => props.subtractButtonClick(props.id, props.step, props.min)}
+          () => props.subtractButtonClick(props.id, props.step, props.max, props.min)}
         />
       </IconButton>
 
       <IconButton aria-label="addStep">
         <AddIcon
           onClick={
-          () => props.addButtonClick(props.id, props.step)}
+          () => props.addButtonClick(props.id, props.step, props.max, props.min)}
         />
       </IconButton>
 
@@ -77,6 +78,7 @@ CustomInput.propTypes = {
   label: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
   min: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
   helpText: PropTypes.string.isRequired,
 };
 

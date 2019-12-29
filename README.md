@@ -26,13 +26,12 @@
 ## Make it right
 
 ### Inputs
-- [ ] Change "verticality" to slope (need to rename the two verticality variables in all of the files as well)
-- [ ] Figure out how to switch between Metric and US Customary units
+- [ ] Figure out how to switch between Metric and 'Merica Freedom units
 
 ### SVG
 - [ ] Diagonal lines are not rendering properly, investigate and maybe open a git issue
 - [ ] Diagonal line spacing: give density options for lines on page (maybe: *none*, *a few*, *some*, *more*, and *a lot*) and base those options on multiples of the nib width.
-- [ ] Set degree field maximums and minimums
+- [x] Set degree field maximums and minimums (and min/max for all other inputs, too)
 - [ ] Add some sort of marker to indicate x-height, like X or nib ladder
 - [ ] Use smaller default margins
 - [ ] Make sure default line colors work in black and white

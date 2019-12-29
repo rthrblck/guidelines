@@ -20,6 +20,7 @@ const Inputs = props => (
           label="Nib-width"
           value={props.nW}
           min={0}
+          max={100}
           step={0.1}
           inputAdornment="mm"
           helpText="The width of your broad-edged nib"
@@ -35,6 +36,7 @@ const Inputs = props => (
           label="X-height"
           value={props.xH}
           min={0}
+          max={100}
           step={0.25}
           inputAdornment="nib-widths"
           helpText="The distance between the baseline and the x-height in nib-widths"
@@ -50,6 +52,7 @@ const Inputs = props => (
           label="Ascender height"
           value={props.aH}
           min={0}
+          max={100}
           step={0.25}
           inputAdornment="nib-widths"
           helpText="The distance between the x-height and the ascender line in nib-widths"
@@ -65,6 +68,7 @@ const Inputs = props => (
           label="Descender height"
           value={props.dH}
           min={0}
+          max={100}
           step={0.25}
           inputAdornment="nib-widths"
           helpText="The distance between the baseline and the descender line in nib-widths"
@@ -80,6 +84,7 @@ const Inputs = props => (
           label="Interlinear spacing"
           value={props.iS}
           min={0}
+          max={100}
           step={0.25}
           inputAdornment="nib-widths"
           helpText="The distance between the descender line of one row and the ascender line of the row below it, in nib widths"
@@ -96,12 +101,13 @@ const Inputs = props => (
       <CardContent>
         <Typography>Letter slope and pen angle</Typography>
 
-        {/* Slope of letters */}
+        {/* Letter slope */}
         <CustomInput
-          id="vA"
+          id="sA"
           label="Letter slope"
-          value={props.vA}
+          value={props.sA}
           min={0}
+          max={90}
           step={1}
           inputAdornment="degrees"
           helpText="The angle of the vertical strokes of the letters, in degrees"
@@ -111,12 +117,13 @@ const Inputs = props => (
           subtractButtonClick={props.subtractButtonClick}
         />
 
-        {/* Distance between verticals */}
+        {/* Distance between letter slope lines */}
         <CustomInput
-          id="vS"
+          id="sS"
           label="Distance between slope lines"
-          value={props.vS}
+          value={props.sS}
           min={10}
+          max={1000}
           step={10}
           inputAdornment="mm"
           helpText="The distance between letter slope lines, in millimeters"
@@ -132,6 +139,7 @@ const Inputs = props => (
           label="Pen angle"
           value={props.pA}
           min={0}
+          max={90}
           step={1}
           inputAdornment="degrees"
           helpText="The angle of the flat edge of the nib in relation to the horizontal lines, in degrees"
@@ -147,6 +155,7 @@ const Inputs = props => (
           label="Distance between pen angle lines"
           value={props.pS}
           min={10}
+          max={1000}
           step={10}
           inputAdornment="mm"
           helpText="The distance between pen angle lines, in millimeters"
@@ -169,6 +178,7 @@ const Inputs = props => (
           label="Page height"
           value={props.pH}
           min={0}
+          max={10000}
           step={1}
           inputAdornment="mm"
           helpText="The height of your sheet of paper, in millimeters"
@@ -184,6 +194,7 @@ const Inputs = props => (
           label="Page width"
           value={props.pW}
           min={0}
+          max={10000}
           step={1}
           inputAdornment="mm"
           helpText="The width of your sheet of paper, in millimeters"
@@ -199,7 +210,7 @@ const Inputs = props => (
           label="Top margin"
           value={props.tM}
           min={0}
-          step={1}
+          step={10000}
           inputAdornment="mm"
           helpText="The margin between the top edge of your page and the top guideline"
 
@@ -214,6 +225,7 @@ const Inputs = props => (
           label="Bottom margin"
           value={props.bM}
           min={0}
+          max={10000}
           step={1}
           inputAdornment="mm"
           helpText="The margin between the bottom edge of your page and the bottom guideline"
@@ -229,6 +241,7 @@ const Inputs = props => (
           label="Left margin"
           value={props.lM}
           min={0}
+          max={10000}
           step={1}
           inputAdornment="mm"
           helpText="The margin between the left edge of your page and the guidelines"
@@ -244,6 +257,7 @@ const Inputs = props => (
           label="Right margin"
           value={props.rM}
           min={0}
+          max={10000}
           step={1}
           inputAdornment="mm"
           helpText="The margin between the right edge of your page and the guidelines"
@@ -268,8 +282,8 @@ Inputs.propTypes = {
   dH: PropTypes.number.isRequired,
   // bC: PropTypes.string.isRequired,
   iS: PropTypes.number.isRequired,
-  vA: PropTypes.number.isRequired,
-  vS: PropTypes.number.isRequired,
+  sA: PropTypes.number.isRequired,
+  sS: PropTypes.number.isRequired,
   // vC: PropTypes.string.isRequired,
   pA: PropTypes.number.isRequired,
   pS: PropTypes.number.isRequired,

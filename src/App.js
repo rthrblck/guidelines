@@ -30,7 +30,7 @@ class App extends Component {
       // Verticality and pen angle
       sA: 0,
       sS: 30,
-      vC: 'gray',
+      sC: 'gray',
       pA: 45,
       pS: 30,
       pC: 'red',
@@ -38,10 +38,10 @@ class App extends Component {
       // Page size and margins
       pH: 216,
       pW: 279,
-      tM: 30,
-      bM: 35,
-      lM: 30,
-      rM: 30,
+      tM: 10,
+      bM: 15,
+      lM: 10,
+      rM: 10,
     };
 
     this.svgRef = React.createRef();
@@ -52,14 +52,16 @@ class App extends Component {
       this.setState({ [name]: value });
     };
 
-    this.addButtonClick = (id, step) => {
-      this.setState(state => ({ [id]: parseFloat((state[id] + step).toFixed(2)) }));
+    this.addButtonClick = (id, step, max, min) => {
+      const newValue = (parseFloat((this.state[id] + step).toFixed(2)));
+      const validateBounds = Math.max(Math.min(newValue, max), min);
+      this.setState({ [id]: validateBounds });
     };
 
-    this.subtractButtonClick = (id, step, min) => {
+    this.subtractButtonClick = (id, step, min, max) => {
       const newValue = (parseFloat((this.state[id] - step).toFixed(2)));
-      const validateValue = Math.max(newValue, min);
-      this.setState({ [id]: validateValue });
+      const validateBounds = Math.min(Math.max(newValue, max), min);
+      this.setState({ [id]: validateBounds });
     };
 
     this.download = () => {

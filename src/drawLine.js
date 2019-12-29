@@ -69,7 +69,7 @@ function diagLine(angle, currentX, strokeColor) {
 // Accepts inputs and produces array of lines.
 function lineGroup(inputs) {
   const {
-    nW, bC, sA, sS, vC, pA, pS, pC, pH, tM, bM, lM,
+    nW, bC, sA, sS, sC, pA, pS, pC, pH, tM, bM, lM,
   } = inputs;
 
   // Sets default value to zero if falsey
@@ -109,7 +109,7 @@ function lineGroup(inputs) {
     // Increment by the spacing between vert lines
     x += sS
   ) {
-    const vLine = diagLine(sA, x, vC);
+    const vLine = diagLine(sA, x, sC);
 
     lineArray.push(vLine);
   }
