@@ -31,9 +31,7 @@
 ### SVG
 - [ ] Diagonal lines are not rendering properly, investigate and maybe open a git issue
 - [ ] Diagonal line spacing: give density options for lines on page (maybe: *none*, *a few*, *some*, *more*, and *a lot*) and base those options on multiples of the nib width.
-- [x] Set degree field maximums and minimums (and min/max for all other inputs, too)
 - [ ] Add some sort of marker to indicate x-height, like X or nib ladder
-- [ ] Use smaller default margins
 - [ ] Make sure default line colors work in black and white
 
 ### Export/Print
@@ -46,10 +44,12 @@
 - [ ] Read accessibility standards
 
 ### Page layout
-  - [ ] Add Title field at top, for use later as downloaded file name, and indicate what makes a good file name with example language
+ -[ ] Make footer and move download button into it.
+  - [ ] Add Title field at bottom next to download button, for use later as downloaded file name. Add tool tip to help explain what makes a good file name with example language
 
 ### Typography
-- [ ] Use "Butterick's Practical Typography" as a starting point for type decisions.
+- [ ] Increase base type size
+- [ ] Use "Butterick's Practical Typography" as a starting point for type decisions
 - [ ] Make sure contrast and text size are appropriate for all users
 - [ ] Print line of text on page that lists all of the input variables
 
@@ -59,7 +59,6 @@
   - [ ] Figure out how to put images into tooltips
 - [ ] Make blank text area smaller, appropriate to amount of text in each, increase size of incremental arrows, and make sure the units are prominently displayed
 - [ ] Make scroll indicator always on
-- [ ] Change order of margin inputs to L, R, T, B
 - [ ] Show all decimal units for each field at all times (like "3.00" instead of "3")
 
 ### SVG

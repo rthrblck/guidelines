@@ -38,7 +38,7 @@ const Inputs = props => (
           min={0}
           max={100}
           step={0.25}
-          inputAdornment="nib-widths"
+          inputAdornment="nw"
           helpText="The distance between the baseline and the x-height in nib-widths"
 
           onChange={props.handleChange}
@@ -54,7 +54,7 @@ const Inputs = props => (
           min={0}
           max={100}
           step={0.25}
-          inputAdornment="nib-widths"
+          inputAdornment="nw"
           helpText="The distance between the x-height and the ascender line in nib-widths"
 
           onChange={props.handleChange}
@@ -70,7 +70,7 @@ const Inputs = props => (
           min={0}
           max={100}
           step={0.25}
-          inputAdornment="nib-widths"
+          inputAdornment="nw"
           helpText="The distance between the baseline and the descender line in nib-widths"
 
           onChange={props.handleChange}
@@ -86,7 +86,7 @@ const Inputs = props => (
           min={0}
           max={100}
           step={0.25}
-          inputAdornment="nib-widths"
+          inputAdornment="nw"
           helpText="The distance between the descender line of one row and the ascender line of the row below it, in nib widths"
 
           onChange={props.handleChange}

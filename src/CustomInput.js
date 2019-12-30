@@ -10,13 +10,12 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
-function
-CustomInput(props) {
+function CustomInput(props) {
   const inputProps = {
     step: props.step,
     min: props.min,
     max: props.max,
-    size: '10rem',
+    size: '60%',
   };
 
   const InputProps = {

@@ -91,25 +91,33 @@ class App extends Component {
         <div className="App">
 
           <header className="App-header">
-            <h1 className="App-title">Calligraphy Guidelines Generator</h1>
+            <h1 className="App-title">X-Height</h1>
+            <h3 className="App-intro">A calligraphy guideline generator, built by a calligrapher for calligraphers.</h3>
           </header>
 
           <div
             className="container"
           >
+            <div
+              className="inputs"
+            >
+              <Inputs
+                {...this.state}
+                handleChange={this.handleChange}
+                addButtonClick={this.addButtonClick}
+                subtractButtonClick={this.subtractButtonClick}
+              />
+            </div>
 
-            <Inputs
-              {...this.state}
-              handleChange={this.handleChange}
-              addButtonClick={this.addButtonClick}
-              subtractButtonClick={this.subtractButtonClick}
-            />
-
-            <SVG
-              ref={this.svgRef}
-              {...this.state}
-              lineArray={lineGroup(this.state)}
-            />
+            <div
+              className="svg"
+            >
+              <SVG
+                ref={this.svgRef}
+                {...this.state}
+                lineArray={lineGroup(this.state)}
+              />
+            </div>
 
             <Button
               variant="contained"

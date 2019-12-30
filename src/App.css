@@ -3,23 +3,21 @@ html, body, #root, .App {
   height: 100%;
 }
 
-.App {
-  text-align: center;
-}
-
 .App-header {
   background-color: #222;
-  height: 50px;
-  padding: 20px;
+  height: 110px;
+  padding: 0px 15px 10px 50px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3rem;
+  float: left;
 }
 
 .App-intro {
-  font-size: large;
+  display: inline-block;
+  padding: 40px 0px 0px 30px;
 }
 
 .container {
@@ -37,11 +35,11 @@ html, body, #root, .App {
 
 .inputs {
   overflow-y: scroll;
-  width: 20%;
+  width: 30%;
 }
 
 .svg {
   overflow-y: scroll;
   overflow-x: scroll;
-  width: 80%;
+  width: 70%;
 }
