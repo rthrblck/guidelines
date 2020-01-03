@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
+    "@material-ui/core": "^4.0.0",
     "@material-ui/icons": "^4.5.1",
+    "@material-ui/styles": "^4.8.2",
     "eslint-plugin-jest": "^22.21.0",
     "jspdf-yworks": "github:yWorks/jsPDF",
     "npm": "^6.13.1",
