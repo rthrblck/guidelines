@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import Inputs from '../OldInputs';
+import Inputs from '../Inputs';
 
 class App extends React.Component {
   state = {
