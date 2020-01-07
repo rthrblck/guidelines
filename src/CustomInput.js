@@ -14,20 +14,19 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 const useStyles = makeStyles({
   wrapper: {
     display: 'flex',
-    height: '4rem',
+    height: 'auto',
+    paddingTop: '10px',
+    paddingBottom: '10px',
   },
-  textField: {
+  buttonWrapper: {
+    display: 'flex',
+    flexDirection: 'column',
   },
   plusButton: {
-    height: '50%',
-    display: 'block',
-  },
-  minusButton: {
-    height: '50%',
-    display: 'block',
+    marginBottom: '-18px',
   },
   help: {
-    marginTop: '30px',
+    marginTop: '32px',
   },
 });
 
@@ -52,7 +51,6 @@ function CustomInput(props) {
         id={props.id}
         label={props.label}
         type="number"
-        className={classes.textField}
         margin="normal"
         value={props.value}
         onChange={props.onChange}
@@ -62,10 +60,11 @@ function CustomInput(props) {
         style={{ width: inputProps.size }}
       />
 
-      <div>
+      <div className={classes.buttonWrapper}>
 
         <IconButton aria-label="addStep" className={classes.plusButton}>
           <AddBoxIcon
+            fontSize="small"
             onClick={
             () => props.addButtonClick(props.id, props.step, props.max, props.min)}
           />
@@ -73,6 +72,7 @@ function CustomInput(props) {
 
         <IconButton aria-label="subtractStep" className={classes.minusButton}>
           <IndeterminateCheckBoxIcon
+            fontSize="small"
             onClick={
             () => props.subtractButtonClick(props.id, props.step, props.max, props.min)}
           />
@@ -88,7 +88,9 @@ function CustomInput(props) {
         }
       >
         <IconButton aria-label="More Info" className={classes.help}>
-          <HelpOutlineIcon />
+          <HelpOutlineIcon
+            fontSize="small"
+          />
         </IconButton>
       </Tooltip>
 
