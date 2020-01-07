@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import { storiesOf } from '@storybook/react';
 import CustomInput from '../CustomInput';
@@ -58,7 +58,7 @@ class ButtonContainer extends React.Component {
 
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <CustomInput
           onChange={this.onChange}
           addButtonClick={this.addButtonClick}
@@ -72,7 +72,7 @@ class ButtonContainer extends React.Component {
           helpText="The width of your broad-edged nib"
         />
 
-      </MuiThemeProvider>
+      </ThemeProvider>
     );
   }
 }
