@@ -229,7 +229,8 @@ function Inputs(props) {
             label="Top margin"
             value={props.tM}
             min={0}
-            step={10000}
+            max={10000}
+            step={1}
             inputAdornment="mm"
             helpText="The margin between the top edge of your page and the top guideline"
 

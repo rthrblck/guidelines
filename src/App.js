@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
-import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 import JSPDF from 'jspdf-yworks';
 import svg2pdf from 'svg2pdf.js';
@@ -119,12 +120,18 @@ class App extends Component {
               />
             </div>
 
-            <Button
-              variant="contained"
+            <Fab
+              style={{
+                position: 'absolute',
+                bottom: theme.spacing(10),
+                right: theme.spacing(10),
+              }}
+              variant="extended"
               onClick={this.download}
             >
-            Download
-            </Button>
+              <ArrowDownwardIcon />
+              Download
+            </Fab>
 
           </div>
 

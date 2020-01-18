@@ -62,19 +62,25 @@ function CustomInput(props) {
 
       <div className={classes.buttonWrapper}>
 
-        <IconButton aria-label="addStep" className={classes.plusButton}>
+        <IconButton
+          aria-label="addStep"
+          className={classes.plusButton}
+          onClick={
+          () => props.addButtonClick(props.id, props.step, props.max, props.min)}
+        >
           <AddBoxIcon
             fontSize="small"
-            onClick={
-            () => props.addButtonClick(props.id, props.step, props.max, props.min)}
           />
         </IconButton>
 
-        <IconButton aria-label="subtractStep" className={classes.minusButton}>
+        <IconButton
+          aria-label="subtractStep"
+          className={classes.minusButton}
+          onClick={
+          () => props.subtractButtonClick(props.id, props.step, props.max, props.min)}
+        >
           <IndeterminateCheckBoxIcon
             fontSize="small"
-            onClick={
-            () => props.subtractButtonClick(props.id, props.step, props.max, props.min)}
           />
         </IconButton>
 
@@ -86,6 +92,7 @@ function CustomInput(props) {
             <Typography color="inherit">{props.helpText}</Typography>
           </React.Fragment>
         }
+        placement="right"
       >
         <IconButton aria-label="More Info" className={classes.help}>
           <HelpOutlineIcon

@@ -69,7 +69,7 @@ function diagLine(angle, currentX, strokeColor) {
 // Accepts inputs and produces array of lines.
 function lineGroup(inputs) {
   const {
-    nW, bC, sA, sS, sC, pA, pS, pC, pH, tM, bM, lM,
+    nW = 0, bC, sA, sS, sC, pA, pS, pC, pH, tM, bM, lM,
   } = inputs;
 
   // Sets default value to zero if falsey
