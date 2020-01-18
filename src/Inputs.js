@@ -324,6 +324,3 @@ Inputs.propTypes = {
 };
 
 export default Inputs;
-
-// TODO: Add checkboxes for margin indicators for x-height and nib width
-// ladders to Fundamental Guidelines Card
