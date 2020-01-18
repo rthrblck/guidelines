@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class SVG extends React.Component {
+class SVG extends Component {
   render() {
     return (
       <svg

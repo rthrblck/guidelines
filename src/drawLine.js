@@ -69,7 +69,7 @@ function diagLine(angle, currentX, strokeColor) {
 // Accepts inputs and produces array of lines.
 function lineGroup(inputs) {
   const {
-    nW, bC, vA, vS, vC, pA, pS, pC, pH, tM, bM, lM,
+    nW = 0, bC, sA, sS, sC, pA, pS, pC, pH, tM, bM, lM,
   } = inputs;
 
   // Sets default value to zero if falsey
@@ -103,13 +103,13 @@ function lineGroup(inputs) {
   // Generates array of verticality lines
   for (
     // Starting X is left margin plus the vertical spacing
-    let x = lM + vS;
+    let x = lM + sS;
     // To cover page in diag lines, need to generate lines far past the right margin. Placholder.
     x <= 10000;
     // Increment by the spacing between vert lines
-    x += vS
+    x += sS
   ) {
-    const vLine = diagLine(vA, x, vC);
+    const vLine = diagLine(sA, x, sC);
 
     lineArray.push(vLine);
   }

@@ -3,340 +3,314 @@ import PropTypes from 'prop-types';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
-import InputAdornment from '@material-ui/core/InputAdornment';
+import Divider from '@material-ui/core/Divider';
 
-const Inputs = props => (
-  <div>
-    <Card>
-      <CardContent>
-        <Typography>Fundamental Lines</Typography>
+import CustomInput from './CustomInput';
 
-        <div>
+function Inputs(props) {
+  return (
+    <div>
+      <Card>
+        <CardContent>
+          <Typography>Fundamental Lines</Typography>
+
           {/* Nib Width */}
-          <TextField
+          <CustomInput
             id="nW"
-            label="Nib width"
-            type="number"
-            margin="normal"
-            helperText="The width of your broad edged nib in millimeters"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-            }}
-            inputProps={{
-              step: '0.1',
-              min: '0',
-            }}
+            label="Nib-width"
             value={props.nW}
+            min={0}
+            max={100}
+            step={0.1}
+            inputAdornment="mm"
+            helpText="The width of your broad-edged nib"
+
             onChange={props.handleChange}
-
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
           />
-        </div>
 
-        <div>
+          <Divider />
+
           {/* X-height */}
-          <TextField
+          <CustomInput
             id="xH"
             label="X-height"
-            type="number"
-            margin="normal"
-            helperText="The distance between the baseline and the x-height in nib widths"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
-            }}
-            inputProps={{
-              step: '0.25',
-              min: '0',
-            }}
             value={props.xH}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={100}
+            step={0.25}
+            inputAdornment="nw"
+            helpText="The distance between the baseline and the x-height in nib-widths"
 
-        <div>
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+          <Divider />
+
           {/* Ascender height */}
-          <TextField
+          <CustomInput
             id="aH"
             label="Ascender height"
-            type="number"
-            margin="normal"
-            helperText="The distance between the x-height and the ascender line in nib widths"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
-            }}
-            inputProps={{
-              step: '0.25',
-              min: '0',
-            }}
             value={props.aH}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={100}
+            step={0.25}
+            inputAdornment="nw"
+            helpText="The distance between the x-height and the ascender line in nib-widths"
 
-        <div>
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+          <Divider />
+
           {/* Descender height */}
-          <TextField
+          <CustomInput
             id="dH"
             label="Descender height"
-            type="number"
-            margin="normal"
-            helperText="The distance between the baseline and the descender line in nib widths"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
-            }}
-            inputProps={{
-              step: '0.25',
-              min: '0',
-            }}
             value={props.dH}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={100}
+            step={0.25}
+            inputAdornment="nw"
+            helpText="The distance between the baseline and the descender line in nib-widths"
 
-        <div>
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+          <Divider />
+
           {/* Interlinear spacing */}
-          <TextField
+          <CustomInput
             id="iS"
             label="Interlinear spacing"
-            type="number"
-            margin="normal"
-            helperText="The distance between the descender line of one row and the ascender line of the row below it, in nib widths"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">nib&nbsp;widths</InputAdornment>,
-            }}
-            inputProps={{
-              step: '0.25',
-              min: '0',
-            }}
             value={props.iS}
+            min={0}
+            max={100}
+            step={0.25}
+            inputAdornment="nw"
+            helpText="The distance between the descender line of one row and the ascender line of the row below it, in nib widths"
+
             onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
           />
-        </div>
 
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
 
-    <Card>
-      <CardContent>
-        <Typography>Verticality and pen angle</Typography>
+      <Card>
+        <CardContent>
+          <Typography>Letter slope and pen angle</Typography>
 
-        <div>
-          {/* Verticality of letters */}
-          <TextField
-            id="vA"
-            label="Verticality of letters"
-            type="number"
-            margin="normal"
-            helperText="The angle of the vertical strokes of the letters, in degrees"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">degrees</InputAdornment>,
-            }}
-            inputProps={{
-              step: '1',
-            }}
-            value={props.vA}
+          {/* Letter slope */}
+          <CustomInput
+            id="sA"
+            label="Letter slope"
+            value={props.sA}
+            min={0}
+            max={90}
+            step={1}
+            inputAdornment="degrees"
+            helpText="The angle of the vertical strokes of the letters, in degrees"
+
             onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
           />
-        </div>
 
-        <div>
-          {/* Distance between verticals */}
-          <TextField
-            id="vS"
-            label="Distance between verticals"
-            type="number"
-            margin="normal"
-            helperText="The distance between the lines showing the angle of vertical strokes, in millimeters"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-            }}
-            inputProps={{
-              step: '10',
-              min: '10',
-            }}
-            value={props.vS}
+          <Divider />
+
+          {/* Distance between letter slope lines */}
+          <CustomInput
+            id="sS"
+            label="Distance between slope lines"
+            value={props.sS}
+            min={10}
+            max={1000}
+            step={10}
+            inputAdornment="mm"
+            helpText="The distance between letter slope lines, in millimeters"
+
             onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
           />
-        </div>
 
-        <div>
+          <Divider />
+
           {/* Pen angle */}
-          <TextField
+          <CustomInput
             id="pA"
             label="Pen angle"
-            type="number"
-            margin="normal"
-            helperText="The angle of the flat edge of the nib in relation to the horizontal lines, in degrees"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">degrees</InputAdornment>,
-            }}
-            inputProps={{
-              step: '1',
-            }}
             value={props.pA}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={90}
+            step={1}
+            inputAdornment="degrees"
+            helpText="The angle of the flat edge of the nib in relation to the horizontal lines, in degrees"
 
-        <div>
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+          <Divider />
+
           {/* Distance between pen angle lines */}
-          <TextField
+          <CustomInput
             id="pS"
             label="Distance between pen angle lines"
-            type="number"
-            margin="normal"
-            helperText="The distance between the lines showing the pen angle strokes, in millimeters"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-            }}
-            inputProps={{
-              step: '10',
-              min: '10',
-            }}
             value={props.pS}
+            min={10}
+            max={1000}
+            step={10}
+            inputAdornment="mm"
+            helpText="The distance between pen angle lines, in millimeters"
+
             onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
           />
-        </div>
 
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
 
-    <Card>
-      <CardContent>
-        <Typography>Page Size and Margins</Typography>
+      <Card>
+        <CardContent>
+          <Typography>Page Size and Margins</Typography>
 
-        <div>
           {/* Page height */}
-          <TextField
+          <CustomInput
             id="pH"
-            label="Page Height"
-            type="number"
-            margin="normal"
-            helperText="The height of your sheet of paper, in millimeters"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-            }}
-            inputProps={{
-              step: '1',
-              min: '0',
-            }}
+            label="Page height"
             value={props.pH}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={10000}
+            step={1}
+            inputAdornment="mm"
+            helpText="The height of your sheet of paper, in millimeters"
 
-        <div>
-          <TextField
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+          <Divider />
+
+          {/* Page width */}
+          <CustomInput
             id="pW"
-            label="Page Width"
-            type="number"
-            margin="normal"
-            helperText="The width of your sheet of paper, in millimeters"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-            }}
-            inputProps={{
-              step: '1',
-              min: '0',
-            }}
+            label="Page width"
             value={props.pW}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={10000}
+            step={1}
+            inputAdornment="mm"
+            helpText="The width of your sheet of paper, in millimeters"
 
-        <div>
-          <TextField
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+          <Divider />
+
+          {/* Top margin */}
+          <CustomInput
             id="tM"
             label="Top margin"
-            type="number"
-            margin="normal"
-            helperText="The margin between the top edge of your page and the top guideline"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-            }}
-            inputProps={{
-              step: '1',
-              min: '0',
-            }}
             value={props.tM}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={10000}
+            step={1}
+            inputAdornment="mm"
+            helpText="The margin between the top edge of your page and the top guideline"
 
-        <div>
-          <TextField
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+          <Divider />
+
+          {/* Bottom margin */}
+          <CustomInput
             id="bM"
             label="Bottom margin"
-            type="number"
-            margin="normal"
-            helperText="The margin between the bottom edge of your page and the bottom guideline"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-            }}
-            inputProps={{
-              step: '1',
-              min: '0',
-            }}
             value={props.bM}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={10000}
+            step={1}
+            inputAdornment="mm"
+            helpText="The margin between the bottom edge of your page and the bottom guideline"
 
-        <div>
-          <TextField
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+          <Divider />
+
+          {/* Left margin */}
+          <CustomInput
             id="lM"
             label="Left margin"
-            type="number"
-            margin="normal"
-            helperText="The margin between the left edge of your page and the guidelines"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-            }}
-            inputProps={{
-              step: '1',
-              min: '0',
-            }}
             value={props.lM}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={10000}
+            step={1}
+            inputAdornment="mm"
+            helpText="The margin between the left edge of your page and the guidelines"
 
-        <div>
-          <TextField
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+          <Divider />
+
+          {/* Right margin */}
+          <CustomInput
             id="rM"
             label="Right margin"
-            type="number"
-            margin="normal"
-            helperText="The margin between the right edge of your page and the guidelines"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">mm</InputAdornment>,
-            }}
-            inputProps={{
-              step: '1',
-              min: '0',
-            }}
             value={props.rM}
-            onChange={props.handleChange}
-          />
-        </div>
+            min={0}
+            max={10000}
+            step={1}
+            inputAdornment="mm"
+            helpText="The margin between the right edge of your page and the guidelines"
 
-      </CardContent>
-    </Card>
-  </div>
-);
+            onChange={props.handleChange}
+            addButtonClick={props.addButtonClick}
+            subtractButtonClick={props.subtractButtonClick}
+          />
+
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
 
 Inputs.propTypes = {
   handleChange: PropTypes.func.isRequired,
+  addButtonClick: PropTypes.func.isRequired,
+  subtractButtonClick: PropTypes.func.isRequired,
   nW: PropTypes.number.isRequired,
   xH: PropTypes.number.isRequired,
   aH: PropTypes.number.isRequired,
   dH: PropTypes.number.isRequired,
   // bC: PropTypes.string.isRequired,
   iS: PropTypes.number.isRequired,
-  vA: PropTypes.number.isRequired,
-  vS: PropTypes.number.isRequired,
+  sA: PropTypes.number.isRequired,
+  sS: PropTypes.number.isRequired,
   // vC: PropTypes.string.isRequired,
   pA: PropTypes.number.isRequired,
   pS: PropTypes.number.isRequired,
