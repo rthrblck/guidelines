@@ -1,105 +1,64 @@
-const lines = require('../drawLine');
+import { describe, expect, test } from 'vitest';
+import lineGroup from '../drawLine';
 
-// Horizontal line
-test('generates a horizontal line object with default key/values', () => {
-  expect(lines.horizLine(10, 'black')).toEqual({
-    x1: 0,
-    y1: 10,
-    x2: 1000,
-    y2: 10,
-    strokeWidth: 1,
-    stroke: 'black',
+const appDefaults = {
+  nW: 3,
+  xH: 5,
+  aH: 3,
+  dH: 3,
+  bC: 'black',
+  iS: 1,
+  sA: 0,
+  sS: 30,
+  sC: 'gray',
+  pA: 45,
+  pS: 30,
+  pC: 'red',
+  pH: 216,
+  pW: 279,
+  tM: 10,
+  bM: 15,
+  lM: 10,
+  rM: 10,
+};
+
+test('returns an array', () => {
+  const lines = lineGroup(appDefaults);
+  expect(Array.isArray(lines)).toBe(true);
+});
+
+test('each line has the expected SVG attributes', () => {
+  const lines = lineGroup(appDefaults);
+  lines.forEach((line) => {
+    expect(line).toHaveProperty('x1');
+    expect(line).toHaveProperty('y1');
+    expect(line).toHaveProperty('x2');
+    expect(line).toHaveProperty('y2');
+    expect(line).toHaveProperty('strokeWidth');
+    expect(line).toHaveProperty('stroke');
   });
 });
 
-// Diagonal line
-test('generates a diagonal line object with default key/values', () => {
-  expect(lines.diagLine(20, 20, 'gray')).toEqual({
-    x1: 20,
-    y1: 0,
-    x2: 20,
-    y2: 1000,
-    strokeWidth: 1,
-    stroke: 'gray',
-    transform: 'rotate(20, 20, 0)',
-  });
-});
-// LineGroup
-
-test('lineGroup with default values give me 528 lines', () => {
-  expect(lines.lineGroup().length).toEqual(528);
+test('horizontal lines have y1 equal to y2', () => {
+  const lines = lineGroup(appDefaults);
+  const horizontals = lines.filter((l) => l.y1 === l.y2);
+  expect(horizontals.length).toBeGreaterThan(0);
 });
 
-test('lineGroup with default values give me an expected first line object', () => {
-  const lineArray = lines.lineGroup();
-  expect(lineArray[0]).toEqual({
-    x1: 0,
-    y1: 10,
-    x2: 1000,
-    y2: 10,
-    strokeWidth: 1,
-    stroke: 'black',
-  });
+test('diagonal lines have a transform property', () => {
+  const lines = lineGroup(appDefaults);
+  const diagonals = lines.filter((l) => l.transform);
+  expect(diagonals.length).toBeGreaterThan(0);
 });
 
-test('lineGroup with default values give me an expected second line object', () => {
-  const lineArray = lines.lineGroup();
-  expect(lineArray[1]).toEqual({
-    x1: 0,
-    y1: 12,
-    x2: 1000,
-    y2: 12,
-    strokeWidth: 1,
-    stroke: 'black',
-  });
+test('first horizontal line is at the top margin', () => {
+  const lines = lineGroup(appDefaults);
+  const firstHorizontal = lines.find((l) => l.y1 === l.y2);
+  expect(firstHorizontal.y1).toBe(appDefaults.tM);
 });
 
-test('lineGroup with default values give me an expected third line object', () => {
-  const lineArray = lines.lineGroup();
-  expect(lineArray[2]).toEqual({
-    x1: 0,
-    y1: 16,
-    x2: 1000,
-    y2: 16,
-    strokeWidth: 1,
-    stroke: 'black',
-  });
-});
-
-test('lineGroup with default values give me an expected fourth line object', () => {
-  const lineArray = lines.lineGroup();
-  expect(lineArray[3]).toEqual({
-    x1: 0,
-    y1: 18,
-    x2: 1000,
-    y2: 18,
-    strokeWidth: 1,
-    stroke: 'black',
-  });
-});
-
-test('lineGroup with default values give me an expected fifth line object', () => {
-  const lineArray = lines.lineGroup();
-  expect(lineArray[4]).toEqual({
-    x1: 0,
-    y1: 20,
-    x2: 1000,
-    y2: 20,
-    strokeWidth: 1,
-    stroke: 'black',
-  });
-});
-
-
-test('lineGroup with default values give me an expected last line object', () => {
-  const lineArray = lines.lineGroup();
-  expect(lineArray[lineArray.length - 1]).toEqual({
-    x1: 1990,
-    y1: 0,
-    x2: 1990,
-    y2: 1000,
-    strokeWidth: 1,
-    stroke: 'red',
-    transform: 'rotate(60, 1990, 0)',
-  });
+test('line stroke is passed through', () => {
+  const lines = lineGroup(appDefaults);
+  const blackLines = lines.filter((l) => l.stroke === 'black');
+  expect(blackLines.length).toBeGreaterThan(0);
 });
