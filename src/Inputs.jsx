@@ -1,10 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 import CustomInput from './CustomInput';
 
@@ -307,14 +306,11 @@ Inputs.propTypes = {
   xH: PropTypes.number.isRequired,
   aH: PropTypes.number.isRequired,
   dH: PropTypes.number.isRequired,
-  // bC: PropTypes.string.isRequired,
   iS: PropTypes.number.isRequired,
   sA: PropTypes.number.isRequired,
   sS: PropTypes.number.isRequired,
-  // vC: PropTypes.string.isRequired,
   pA: PropTypes.number.isRequired,
   pS: PropTypes.number.isRequired,
-  // pC: PropTypes.string.isRequired,
   pH: PropTypes.number.isRequired,
   pW: PropTypes.number.isRequired,
   tM: PropTypes.number.isRequired,

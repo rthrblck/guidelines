@@ -1,51 +1,18 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
-import TextField from '@material-ui/core/TextField';
-import IconButton from '@material-ui/core/IconButton';
-import AddBoxIcon from '@material-ui/icons/AddBox';
-import IndeterminateCheckBoxIcon from '@material-ui/icons/IndeterminateCheckBox';
-import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
-import InputAdornment from '@material-ui/core/InputAdornment';
-
-const useStyles = makeStyles({
-  wrapper: {
-    display: 'flex',
-    height: 'auto',
-    paddingTop: '10px',
-    paddingBottom: '10px',
-  },
-  buttonWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  plusButton: {
-    marginBottom: '-18px',
-  },
-  help: {
-    marginTop: '32px',
-  },
-});
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import IconButton from '@mui/material/IconButton';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import InputAdornment from '@mui/material/InputAdornment';
 
 function CustomInput(props) {
-  const classes = useStyles();
-
-  const inputProps = {
-    step: props.step,
-    min: props.min,
-    max: props.max,
-    size: '12rem',
-  };
-
-  const InputProps = {
-    endAdornment: <InputAdornment position="end">{props.inputAdornment}</InputAdornment>,
-  };
-
   return (
-    <div className={classes.wrapper}>
+    <Box sx={{ display: 'flex', height: 'auto', paddingTop: '10px', paddingBottom: '10px' }}>
 
       <TextField
         id={props.id}
@@ -55,16 +22,24 @@ function CustomInput(props) {
         value={props.value}
         onChange={props.onChange}
 
-        inputProps={inputProps}
-        InputProps={InputProps}
-        style={{ width: inputProps.size }}
+        slotProps={{
+          htmlInput: {
+            step: props.step,
+            min: props.min,
+            max: props.max,
+          },
+          input: {
+            endAdornment: <InputAdornment position="end">{props.inputAdornment}</InputAdornment>,
+            sx: { width: '12rem' },
+          },
+        }}
       />
 
-      <div className={classes.buttonWrapper}>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
 
         <IconButton
           aria-label="addStep"
-          className={classes.plusButton}
+          sx={{ marginBottom: '-18px' }}
           onClick={
           () => props.addButtonClick(props.id, props.step, props.max, props.min)}
         >
@@ -75,7 +50,6 @@ function CustomInput(props) {
 
         <IconButton
           aria-label="subtractStep"
-          className={classes.minusButton}
           onClick={
           () => props.subtractButtonClick(props.id, props.step, props.max, props.min)}
         >
@@ -84,24 +58,24 @@ function CustomInput(props) {
           />
         </IconButton>
 
-      </div>
+      </Box>
 
       <Tooltip
         title={
-          <React.Fragment>
+          <>
             <Typography color="inherit">{props.helpText}</Typography>
-          </React.Fragment>
+          </>
         }
         placement="right"
       >
-        <IconButton aria-label="More Info" className={classes.help}>
+        <IconButton aria-label="More Info" sx={{ marginTop: '32px' }}>
           <HelpOutlineIcon
             fontSize="small"
           />
         </IconButton>
       </Tooltip>
 
-    </div>
+    </Box>
   );
 }
 
