@@ -13,7 +13,7 @@ import './App.css';
 
 import Inputs from './Inputs';
 
-import SVG from './svg';
+import SVG from './SVG';
 import lineGroup from './drawLine';
 
 const theme = createMuiTheme({

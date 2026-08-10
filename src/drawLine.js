@@ -100,7 +100,7 @@ function lineGroup(inputs) {
     lineArray.push(aLine, xLine, bLine, dLine);
   }
 
-  // Generates array of verticality lines
+  // Generates array of slope lines
   for (
     // Starting X is left margin plus the vertical spacing
     let x = lM + sS;
